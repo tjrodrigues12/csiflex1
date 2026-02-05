@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="1025" Height="14" Clip="F1 M 0,0L 1025,0L 1025,14L 0,14L 0,0">
+    <Canvas x:Name="scrollbar1" Width="799.999" Height="600" Canvas.Left="0" Canvas.Top="0">
+        <Rectangle x:Name="Rectangle" Width="1025" Height="15" Canvas.Left="0" Stretch="Fill" StrokeLineJoin="Round" Stroke="#FFC04100">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.230271,0.871164" EndPoint="0.230271,0.0854492">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#FFB45214" Offset="0"/>
+                        <GradientStop Color="#FFD18A54" Offset="0.607306"/>
+                        <GradientStop Color="#FFFAB07E" Offset="1"/>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Canvas>
+</Canvas>

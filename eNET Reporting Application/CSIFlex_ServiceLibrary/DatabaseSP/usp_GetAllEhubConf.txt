@@ -1,0 +1,4 @@
+CREATE PROCEDURE `usp_GetAllEhubConf`()
+BEGIN
+select * from tbl_ehub_conf;
+END

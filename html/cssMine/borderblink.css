@@ -1,0 +1,71 @@
+@-moz-keyframes alarmblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: red
+    }
+}
+
+@-webkit-keyframes alarmblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: red
+    }
+}
+
+@keyframes alarmblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: red
+    }
+}
+
+.alarmblink {
+    -moz-animation: alarmblink 1200ms infinite;
+    -webkit-animation: alarmblink 1200ms infinite;
+    animation: alarmblink 1200ms infinite;
+}
+
+@-moz-keyframes warningblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+@-webkit-keyframes warningblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+@keyframes warningblink {
+    from,
+    to {
+        border-color: white
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+.warningblink {
+    -moz-animation: warningblink 1200ms infinite;
+    -webkit-animation: warningblink 1200ms infinite;
+    animation: warningblink 1200ms infinite;
+}

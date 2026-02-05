@@ -1,0 +1,50 @@
+CREATE PROCEDURE `usp_MonSetupMonitorData`(
+IN in_machine_temp_filename varchar(200),
+IN in_last_updated_date datetime, 
+IN in_current_status varchar(50),
+IN in_current_part_no varchar(100)
+)
+BEGIN
+
+DECLARE last_current_status varchar(50);
+DECLARE elapsed_time int unsigned DEFAULT 0;
+DECLARE minimum_value int unsigned DEFAULT 0;
+DECLARE multiplier int unsigned DEFAULT 0;
+DECLARE old_part_count int unsigned DEFAULT 0;
+DECLARE old_part_number varchar(20);
+DECLARE current_cycle int unsigned DEFAULT 0;
+
+set last_current_status= (select current_status from csi_enetdata.tbl_monsetup where machine_temp_filename=in_machine_temp_filename);
+if last_current_status = '_CON' and in_current_status='_COFF' then
+	set elapsed_time = (select TIMESTAMPDIFF(SECOND,last_updated_date,now()) from csi_enetdata.tbl_monsetup where machine_temp_filename=in_machine_temp_filename limit 1);
+    set minimum_value = (select min_ideal_ci from csi_enetdata.tbl_monsetup where machine_temp_filename=in_machine_temp_filename limit 1);
+    if elapsed_time >= minimum_value then
+		set multiplier = (select part_multiplier_mn from csi_enetdata.tbl_monsetup where machine_temp_filename=in_machine_temp_filename limit 1);
+		set old_part_count = (select part_count from csi_enetdata.tbl_monsetup where machine_temp_filename=in_machine_temp_filename limit 1);
+		UPDATE `csi_enetdata`.`tbl_monsetup` SET
+		`part_count` = (multiplier+old_part_count),
+        `last_cycle_time` = elapsed_time
+		WHERE `machine_temp_filename` = in_machine_temp_filename; 
+    end if;
+end if;
+set old_part_number = (select current_part_no from csi_enetdata.tbl_monsetup where csi_enetdata.tbl_monsetup.current_part_no = in_current_part_no);
+set current_cycle = (select part_count from csi_enetdata.tbl_monsetup where csi_enetdata.tbl_monsetup.current_part_no = in_current_part_no);
+
+if in_current_part_no <> old_part_number then
+	set current_cycle = 0;
+end if;
+
+if current_cycle is null then
+	set current_cycle = 0;
+end if;
+SET SQL_SAFE_UPDATES=0;
+UPDATE `csi_enetdata`.`tbl_monsetup`
+SET
+`current_status` = in_current_status,
+`last_updated_date` = in_last_updated_date,
+`current_part_no` = in_current_part_no,
+`part_count` = current_cycle
+WHERE `machine_temp_filename` = in_machine_temp_filename;
+
+
+END

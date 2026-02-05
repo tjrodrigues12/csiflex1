@@ -1,0 +1,7 @@
+CREATE PROCEDURE `get_current_shift_by_department`()
+BEGIN
+
+SELECT distinct department_name, shift_name from csi_enetdata.tbl_shift_data WHERE 
+day_name=dayname(now()) AND shift_start<time_to_sec(now()) AND shift_end>time_to_sec(now());
+
+END

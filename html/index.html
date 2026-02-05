@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSIFlex Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Frameworks and libraries CSS links -->
+    <link rel="stylesheet" href="frameworks-libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <!-- personal CSS links -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/myfeed.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/datatable.css">
+    <link rel="stylesheet" href="css/mybootstrap.css">
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/borderblink.css">
+
+    <!-- Frameworks and libraries scripts links -->
+    <script type="text/javascript" src="frameworks-libraries/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="frameworks-libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="frameworks-libraries/Chart.min.js"></script>
+    <script type="text/javascript" src="frameworks-libraries/simpleWeather-3.1.0/jquery.simpleWeather.min.js"></script>
+    <script type="text/javascript" src="frameworks-libraries/date.js"></script>
+    <script type="text/javascript" src="frameworks-libraries/modernizr.js"></script>
+
+    <!-- Personal scripts -->
+    <!-- IMPORTANT NOTE : The order in which the scripts are loaded
+        matter.If data of a script are used before the script is loaded
+        there will be some errors. -->
+    <script type="text/javascript" src="js/datainitialization.js"></script>
+    <script type="text/javascript" src="js/machinesstatushashmap.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/doughnutchart.js"></script>
+    <script type="text/javascript" src="js/timeline.js"></script>
+    <script type="text/javascript" src="js/livestatustable.js"></script>
+    <script type="text/javascript" src="js/currentperf.js"></script>
+    <script type="text/javascript" src="js/target.js"></script>
+    <script type="text/javascript" src="js/legendsection.js"></script>
+    <script type="text/javascript" src="js/rssfeed.js"></script>
+    <script type="text/javascript" src="js/datetimetemp.js"></script>
+    <script type="text/javascript" src="js/media.js."></script>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+</head>
+
+<body>
+    <nav id="top-bar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 app-date" id="time">10:10:0</div>
+                    <div class="col-sm-4 col-md-4 col-lg-4" id="temperatureSection">TEMPERATURE</div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 app-title" id="dashboardTitle">CSIFlex Dashboard</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <!-- "Logo" section-->
+        <div class="row" id="logoSection">
+            <a href="http://www.csiflex.com" target="_blank">
+                <div class="col-xs-12 col-sm-2" id="csiflexLogo">
+                    <img class="logo" src="img/logo-csi-flex.png" alt="logo csi flex">
+                </div>
+            </a>
+            <div class="col-xs-12 col-sm-8" id="LegendSection" style="display:table;margin-top:0.25em;"></div>
+            <div class="col-xs-0 col-sm-2" id="customLogo"><img class="logo" id="customImg" src="img/logo-enet.png" alt="logo enet" style="max-height:3.5em;"></div>
+        </div>
+        <div class="row padding-sm" id="panelSection" style="overflow:hidden;">
+            <!-- "Current_Week-Current_Performance" section-->
+            <div id="sidebar" class="col-lg-2 padding-sm">
+                <!-- "Current_Week" section-->
+                <div id="piechartid" class="col-lg-12" style="padding:0em;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="text-align:center;" id="titleCurrentPeriodPanel">
+                            <span id="currentPeriod">Current Week</span> <span id="nameOfTheMachine"></span>
+                        </div>
+                        <div class="panel-body">
+                            <canvas id="myChart" width=100% height=100%></canvas>
+                        </div>
+                    </div>
+                </div>
+				 <div id="targetid" class="col-lg-12" style="padding:0em;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="text-align:center;" id="targetPanelHead">
+                           <span id="targetsPeriod"></span>Targets
+                        </div>
+                        <div class="panel-body" id="targetBodyId" >
+                        </div>
+                    </div>
+                </div>
+                <div id="currentperfid" class="col-lg-12" style="padding:0em;">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="text-align:center;" id="currentPerfPanelHead">
+                            Current Performance
+                        </div>
+                        <div class="panel-body" id="currentPerfBodyid"></div>
+                    </div>
+                </div>
+            </div>
+            <span id="hiddentext" class="defs-only" style="display:none;" width="0" height="0">
+                    </span>
+            <div id="hiddendiv" class="defs-only cell-text rounded" style="display:none;" width="0" height="0">test</div>
+
+            <!-- Hidden tick marks -->
+            <svg id="hiddentickmarks" class="defs-only" style="display:none" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+                    <symbol id="ruler-hour-mark" >
+                        <rect width="0.1em" height="0.30em" style="fill:rgb(160, 160, 160);"></rect>
+                    </symbol>
+                    <symbol id="ruler-halfhour-mark" >
+                        <rect width="0.05em" height="0.20em" style="fill:rgb(160, 160, 160);"></rect>
+                    </symbol>
+                    <symbol id="ruler-horiz" >
+                        <rect width="100%" height="0.025em" style="fill:rgb(160, 160, 160);"></rect>
+                    </symbol>
+                </svg>
+            <svg id="hiddentimelines" class="defs-only" style="display:none" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+                </svg>
+
+            <div id="liveStatus" class="col-lg-10 padding-sm">
+                <table class="display panel panel-default" id="liveStatusTable" style="width:100%;table-layout: fixed;">
+                    <thead id="livestatusheader" class="panel-heading">
+                        <tr>
+                            <th class="colmach panel-heading myheaders">
+                                Machine
+                            </th>
+                            <th class="colstatus panel-heading myheaders">
+                                Current Status
+                            </th>
+                            <th class="colfovr panel-heading myheaders" style="width:8%;">
+                                FOvr(%)
+                            </th>
+                            <th class="colsovr panel-heading myheaders" style="width:8%;">
+                                SOvr(%)
+                            </th>
+                            <th class="colrovr panel-heading myheaders" style="width:8%;">
+                                ROvr(%)
+                            </th>
+                            <th class="colpart panel-heading myheaders">
+                                Part Number
+                            </th>
+                            <th class="colcnt panel-heading myheaders" style="width:9%;">
+                                Count
+                            </th>
+                            <th class="collastcyc panel-heading myheaders">
+                                Last Cycle
+                            </th>
+                            <th class="colcurcyc panel-heading myheaders">
+                                Current Cycle
+                            </th>
+                            <th class="colelapsed panel-heading myheaders">
+                                Elapsed time
+                            </th>
+                            <th class="colshiftutil panel-heading myheaders" style="width:9%;">
+                                Shift
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="liveStatusBody" class="panel-body">
+                    </tbody>
+                </table>
+                <iframe id="iframeid" src="" style="display:none;width:100%;height:100%;" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div>
+    </div>
+    <div id="msgFeedid" style="position: fixed; bottom: 0; padding-top:0.3em; background: white; z-index: 3; width: 100%;">
+        <marquee id="myRSSFeed" onmouseover="this.stop();" onmouseout="this.start();">
+            <span class="myfeed">COMPANY SUMMER PARTY - TOMORROW @ PLANT 1</span>
+            <span class="myfeed">ROGER - EMPLOYEE OF THE WEEK</span>
+        </marquee>
+    </div>
+
+    <nav id="mediamenu" class="cd-stretchy-nav add-content nav-is-visible hide">
+        <ul>
+            <li><a href="#0" onclick="Previous()"><span style="font-size: 62.5%;">Previous</span></a></li>
+            <li><a href="#0" onclick="Pause()"><span style="font-size: 62.5%;">Pause</span></a></li>
+            <li><a href="#0" onclick="Start()"><span style="font-size: 62.5%;">Start</span></a></li>
+            <li><a href="#0" onclick="Next()"><span style="font-size: 62.5%;">Next</span></a></li>
+        </ul>
+        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+    </nav>
+</body>
+
+</html>

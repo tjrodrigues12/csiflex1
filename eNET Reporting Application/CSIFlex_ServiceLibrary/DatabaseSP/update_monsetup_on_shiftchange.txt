@@ -1,0 +1,8 @@
+CREATE PROCEDURE `update_monsetup_on_shiftchange`(IN in_department_name varchar(20))
+BEGIN
+
+UPDATE `csi_enetdata`.`tbl_monsetup`
+SET
+`part_count` = 0
+WHERE `reset_counter_nm` = 3 and `department_name`=in_department_name;
+END

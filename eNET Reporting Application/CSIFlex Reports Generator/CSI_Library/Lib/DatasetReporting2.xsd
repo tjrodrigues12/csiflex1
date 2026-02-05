@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatasetReporting2" targetNamespace="http://tempuri.org/DatasetReporting2.xsd" xmlns:mstns="http://tempuri.org/DatasetReporting2.xsd" xmlns="http://tempuri.org/DatasetReporting2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatasetReporting2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatasetReporting2" msprop:Generator_UserDSName="DatasetReporting2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Tbl_MachineName" msprop:Generator_TableClassName="Tbl_MachineNameDataTable" msprop:Generator_TableVarName="tableTbl_MachineName" msprop:Generator_TablePropName="Tbl_MachineName" msprop:Generator_RowDeletingName="Tbl_MachineNameRowDeleting" msprop:Generator_RowChangingName="Tbl_MachineNameRowChanging" msprop:Generator_RowEvHandlerName="Tbl_MachineNameRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_MachineNameRowDeleted" msprop:Generator_UserTableName="Tbl_MachineName" msprop:Generator_RowChangedName="Tbl_MachineNameRowChanged" msprop:Generator_RowEvArgName="Tbl_MachineNameRowChangeEvent" msprop:Generator_RowClassName="Tbl_MachineNameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_DataMachine" msprop:Generator_TableClassName="Tbl_DataMachineDataTable" msprop:Generator_TableVarName="tableTbl_DataMachine" msprop:Generator_TablePropName="Tbl_DataMachine" msprop:Generator_RowDeletingName="Tbl_DataMachineRowDeleting" msprop:Generator_RowChangingName="Tbl_DataMachineRowChanging" msprop:Generator_RowEvHandlerName="Tbl_DataMachineRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_DataMachineRowDeleted" msprop:Generator_UserTableName="Tbl_DataMachine" msprop:Generator_RowChangedName="Tbl_DataMachineRowChanged" msprop:Generator_RowEvArgName="Tbl_DataMachineRowChangeEvent" msprop:Generator_RowClassName="Tbl_DataMachineRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="Totalcycletime" msprop:Generator_ColumnVarNameInTable="columnTotalcycletime" msprop:Generator_ColumnPropNameInRow="Totalcycletime" msprop:Generator_ColumnPropNameInTable="TotalcycletimeColumn" msprop:Generator_UserColumnName="Totalcycletime" type="xs:double" minOccurs="0" />
+              <xs:element name="CycleOn" msprop:Generator_ColumnVarNameInTable="columnCycleOn" msprop:Generator_ColumnPropNameInRow="CycleOn" msprop:Generator_ColumnPropNameInTable="CycleOnColumn" msprop:Generator_UserColumnName="CycleOn" type="xs:int" minOccurs="0" />
+              <xs:element name="CycleOff" msprop:Generator_ColumnVarNameInTable="columnCycleOff" msprop:Generator_ColumnPropNameInRow="CycleOff" msprop:Generator_ColumnPropNameInTable="CycleOffColumn" msprop:Generator_UserColumnName="CycleOff" type="xs:int" minOccurs="0" />
+              <xs:element name="SumSetup" msprop:Generator_ColumnVarNameInTable="columnSumSetup" msprop:Generator_ColumnPropNameInRow="SumSetup" msprop:Generator_ColumnPropNameInTable="SumSetupColumn" msprop:Generator_UserColumnName="SumSetup" type="xs:int" minOccurs="0" />
+              <xs:element name="SumOther" msprop:Generator_ColumnVarNameInTable="columnSumOther" msprop:Generator_ColumnPropNameInRow="SumOther" msprop:Generator_ColumnPropNameInTable="SumOtherColumn" msprop:Generator_UserColumnName="SumOther" type="xs:int" minOccurs="0" />
+              <xs:element name="StatusExpr" msprop:Generator_ColumnVarNameInTable="columnStatusExpr" msprop:Generator_ColumnPropNameInRow="StatusExpr" msprop:Generator_ColumnPropNameInTable="StatusExprColumn" msprop:Generator_UserColumnName="StatusExpr" type="xs:string" minOccurs="0" />
+              <xs:element name="shift" msprop:Generator_ColumnVarNameInTable="columnshift" msprop:Generator_ColumnPropNameInRow="shift" msprop:Generator_ColumnPropNameInTable="shiftColumn" msprop:Generator_UserColumnName="shift" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_Top4Reason" msprop:Generator_TableClassName="Tbl_Top4ReasonDataTable" msprop:Generator_TableVarName="tableTbl_Top4Reason" msprop:Generator_TablePropName="Tbl_Top4Reason" msprop:Generator_RowDeletingName="Tbl_Top4ReasonRowDeleting" msprop:Generator_RowChangingName="Tbl_Top4ReasonRowChanging" msprop:Generator_RowEvHandlerName="Tbl_Top4ReasonRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_Top4ReasonRowDeleted" msprop:Generator_UserTableName="Tbl_Top4Reason" msprop:Generator_RowChangedName="Tbl_Top4ReasonRowChanged" msprop:Generator_RowEvArgName="Tbl_Top4ReasonRowChangeEvent" msprop:Generator_RowClassName="Tbl_Top4ReasonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="ReasonName" msprop:Generator_ColumnVarNameInTable="columnReasonName" msprop:Generator_ColumnPropNameInRow="ReasonName" msprop:Generator_ColumnPropNameInTable="ReasonNameColumn" msprop:Generator_UserColumnName="ReasonName" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleTime" msprop:Generator_ColumnVarNameInTable="columnCycleTime" msprop:Generator_ColumnPropNameInRow="CycleTime" msprop:Generator_ColumnPropNameInTable="CycleTimeColumn" msprop:Generator_UserColumnName="CycleTime" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_DataMachine4wk" msprop:Generator_TableClassName="Tbl_DataMachine4wkDataTable" msprop:Generator_TableVarName="tableTbl_DataMachine4wk" msprop:Generator_TablePropName="Tbl_DataMachine4wk" msprop:Generator_RowDeletingName="Tbl_DataMachine4wkRowDeleting" msprop:Generator_RowChangingName="Tbl_DataMachine4wkRowChanging" msprop:Generator_RowEvHandlerName="Tbl_DataMachine4wkRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_DataMachine4wkRowDeleted" msprop:Generator_UserTableName="Tbl_DataMachine4wk" msprop:Generator_RowChangedName="Tbl_DataMachine4wkRowChanged" msprop:Generator_RowEvArgName="Tbl_DataMachine4wkRowChangeEvent" msprop:Generator_RowClassName="Tbl_DataMachine4wkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="Totalcycletime" msprop:Generator_ColumnVarNameInTable="columnTotalcycletime" msprop:Generator_ColumnPropNameInRow="Totalcycletime" msprop:Generator_ColumnPropNameInTable="TotalcycletimeColumn" msprop:Generator_UserColumnName="Totalcycletime" type="xs:double" minOccurs="0" />
+              <xs:element name="CycleOn" msprop:Generator_ColumnVarNameInTable="columnCycleOn" msprop:Generator_ColumnPropNameInRow="CycleOn" msprop:Generator_ColumnPropNameInTable="CycleOnColumn" msprop:Generator_UserColumnName="CycleOn" type="xs:int" minOccurs="0" />
+              <xs:element name="CycleOff" msprop:Generator_ColumnVarNameInTable="columnCycleOff" msprop:Generator_ColumnPropNameInRow="CycleOff" msprop:Generator_ColumnPropNameInTable="CycleOffColumn" msprop:Generator_UserColumnName="CycleOff" type="xs:int" minOccurs="0" />
+              <xs:element name="SumSetup" msprop:Generator_ColumnVarNameInTable="columnSumSetup" msprop:Generator_ColumnPropNameInRow="SumSetup" msprop:Generator_ColumnPropNameInTable="SumSetupColumn" msprop:Generator_UserColumnName="SumSetup" type="xs:int" minOccurs="0" />
+              <xs:element name="SumOther" msprop:Generator_ColumnVarNameInTable="columnSumOther" msprop:Generator_ColumnPropNameInRow="SumOther" msprop:Generator_ColumnPropNameInTable="SumOtherColumn" msprop:Generator_UserColumnName="SumOther" type="xs:int" minOccurs="0" />
+              <xs:element name="StatusExpr" msprop:Generator_ColumnVarNameInTable="columnStatusExpr" msprop:Generator_ColumnPropNameInRow="StatusExpr" msprop:Generator_ColumnPropNameInTable="StatusExprColumn" msprop:Generator_UserColumnName="StatusExpr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_Top4Reason4wk" msprop:Generator_TableClassName="Tbl_Top4Reason4wkDataTable" msprop:Generator_TableVarName="tableTbl_Top4Reason4wk" msprop:Generator_TablePropName="Tbl_Top4Reason4wk" msprop:Generator_RowDeletingName="Tbl_Top4Reason4wkRowDeleting" msprop:Generator_RowChangingName="Tbl_Top4Reason4wkRowChanging" msprop:Generator_RowEvHandlerName="Tbl_Top4Reason4wkRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_Top4Reason4wkRowDeleted" msprop:Generator_UserTableName="Tbl_Top4Reason4wk" msprop:Generator_RowChangedName="Tbl_Top4Reason4wkRowChanged" msprop:Generator_RowEvArgName="Tbl_Top4Reason4wkRowChangeEvent" msprop:Generator_RowClassName="Tbl_Top4Reason4wkRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="ReasonName" msprop:Generator_ColumnVarNameInTable="columnReasonName" msprop:Generator_ColumnPropNameInRow="ReasonName" msprop:Generator_ColumnPropNameInTable="ReasonNameColumn" msprop:Generator_UserColumnName="ReasonName" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleTime" msprop:Generator_ColumnVarNameInTable="columnCycleTime" msprop:Generator_ColumnPropNameInRow="CycleTime" msprop:Generator_ColumnPropNameInTable="CycleTimeColumn" msprop:Generator_UserColumnName="CycleTime" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_History18Weekly" msprop:Generator_TableClassName="Tbl_History18WeeklyDataTable" msprop:Generator_TableVarName="tableTbl_History18Weekly" msprop:Generator_TablePropName="Tbl_History18Weekly" msprop:Generator_RowDeletingName="Tbl_History18WeeklyRowDeleting" msprop:Generator_RowChangingName="Tbl_History18WeeklyRowChanging" msprop:Generator_RowEvHandlerName="Tbl_History18WeeklyRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_History18WeeklyRowDeleted" msprop:Generator_UserTableName="Tbl_History18Weekly" msprop:Generator_RowChangedName="Tbl_History18WeeklyRowChanged" msprop:Generator_RowEvArgName="Tbl_History18WeeklyRowChangeEvent" msprop:Generator_RowClassName="Tbl_History18WeeklyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="WeekStart" msprop:Generator_ColumnVarNameInTable="columnWeekStart" msprop:Generator_ColumnPropNameInRow="WeekStart" msprop:Generator_ColumnPropNameInTable="WeekStartColumn" msprop:Generator_UserColumnName="WeekStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CycleOn" msprop:Generator_ColumnVarNameInTable="columnCycleOn" msprop:Generator_ColumnPropNameInRow="CycleOn" msprop:Generator_ColumnPropNameInTable="CycleOnColumn" msprop:Generator_UserColumnName="CycleOn" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleOff" msprop:Generator_ColumnVarNameInTable="columnCycleOff" msprop:Generator_ColumnPropNameInRow="CycleOff" msprop:Generator_ColumnPropNameInTable="CycleOffColumn" msprop:Generator_UserColumnName="CycleOff" type="xs:string" minOccurs="0" />
+              <xs:element name="SumSetup" msprop:Generator_ColumnVarNameInTable="columnSumSetup" msprop:Generator_ColumnPropNameInRow="SumSetup" msprop:Generator_ColumnPropNameInTable="SumSetupColumn" msprop:Generator_UserColumnName="SumSetup" type="xs:string" minOccurs="0" />
+              <xs:element name="SumOther" msprop:Generator_ColumnVarNameInTable="columnSumOther" msprop:Generator_ColumnPropNameInRow="SumOther" msprop:Generator_ColumnPropNameInTable="SumOtherColumn" msprop:Generator_UserColumnName="SumOther" type="xs:string" minOccurs="0" />
+              <xs:element name="Totalcycletime" msprop:Generator_ColumnVarNameInTable="columnTotalcycletime" msprop:Generator_ColumnPropNameInRow="Totalcycletime" msprop:Generator_ColumnPropNameInTable="TotalcycletimeColumn" msprop:Generator_UserColumnName="Totalcycletime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TimeLine" msprop:Generator_TableClassName="TimeLineDataTable" msprop:Generator_TableVarName="tableTimeLine" msprop:Generator_TablePropName="TimeLine" msprop:Generator_RowDeletingName="TimeLineRowDeleting" msprop:Generator_RowChangingName="TimeLineRowChanging" msprop:Generator_RowEvHandlerName="TimeLineRowChangeEventHandler" msprop:Generator_RowDeletedName="TimeLineRowDeleted" msprop:Generator_UserTableName="TimeLine" msprop:Generator_RowChangedName="TimeLineRowChanged" msprop:Generator_RowEvArgName="TimeLineRowChangeEvent" msprop:Generator_RowClassName="TimeLineRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReasonName" msprop:Generator_ColumnVarNameInTable="columnReasonName" msprop:Generator_ColumnPropNameInRow="ReasonName" msprop:Generator_ColumnPropNameInTable="ReasonNameColumn" msprop:Generator_UserColumnName="ReasonName" type="xs:string" minOccurs="0" />
+              <xs:element name="time_" msprop:Generator_ColumnVarNameInTable="columntime_" msprop:Generator_ColumnPropNameInRow="time_" msprop:Generator_ColumnPropNameInTable="time_Column" msprop:Generator_UserColumnName="time_" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="shift" msprop:Generator_ColumnVarNameInTable="columnshift" msprop:Generator_ColumnPropNameInRow="shift" msprop:Generator_ColumnPropNameInTable="shiftColumn" msprop:Generator_UserColumnName="shift" type="xs:int" minOccurs="0" />
+              <xs:element name="cycletime" msprop:Generator_ColumnVarNameInTable="columncycletime" msprop:Generator_ColumnPropNameInRow="cycletime" msprop:Generator_ColumnPropNameInTable="cycletimeColumn" msprop:Generator_UserColumnName="cycletime" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl_partsNumber" msprop:Generator_TableClassName="tbl_partsNumberDataTable" msprop:Generator_TableVarName="tabletbl_partsNumber" msprop:Generator_TablePropName="tbl_partsNumber" msprop:Generator_RowDeletingName="tbl_partsNumberRowDeleting" msprop:Generator_RowChangingName="tbl_partsNumberRowChanging" msprop:Generator_RowEvHandlerName="tbl_partsNumberRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_partsNumberRowDeleted" msprop:Generator_UserTableName="tbl_partsNumber" msprop:Generator_RowChangedName="tbl_partsNumberRowChanged" msprop:Generator_RowEvArgName="tbl_partsNumberRowChangeEvent" msprop:Generator_RowClassName="tbl_partsNumberRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="dateAndTime" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="dateAndTime" msprop:Generator_ColumnVarNameInTable="columndateAndTime" msprop:Generator_ColumnPropNameInTable="dateAndTimeColumn" msprop:Generator_UserColumnName="dateAndTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="partName" msprop:Generator_ColumnVarNameInTable="columnpartName" msprop:Generator_ColumnPropNameInRow="partName" msprop:Generator_ColumnPropNameInTable="partNameColumn" msprop:Generator_UserColumnName="partName" type="xs:string" minOccurs="0" />
+              <xs:element name="counting" msprop:Generator_ColumnVarNameInTable="columncounting" msprop:Generator_ColumnPropNameInRow="counting" msprop:Generator_ColumnPropNameInTable="countingColumn" msprop:Generator_UserColumnName="counting" type="xs:int" minOccurs="0" />
+              <xs:element name="MonthName" msprop:Generator_ColumnVarNameInTable="columnMonthName" msprop:Generator_ColumnPropNameInRow="MonthName" msprop:Generator_ColumnPropNameInTable="MonthNameColumn" msprop:Generator_UserColumnName="MonthName" type="xs:string" minOccurs="0" />
+              <xs:element name="quater" msprop:Generator_ColumnVarNameInTable="columnquater" msprop:Generator_ColumnPropNameInRow="quater" msprop:Generator_ColumnPropNameInTable="quaterColumn" msprop:Generator_UserColumnName="quater" type="xs:int" minOccurs="0" />
+              <xs:element name="year_" msprop:Generator_ColumnVarNameInTable="columnyear_" msprop:Generator_ColumnPropNameInRow="year_" msprop:Generator_ColumnPropNameInTable="year_Column" msprop:Generator_UserColumnName="year_" type="xs:string" minOccurs="0" />
+              <xs:element name="month_" msprop:Generator_ColumnVarNameInTable="columnmonth_" msprop:Generator_ColumnPropNameInRow="month_" msprop:Generator_ColumnPropNameInTable="month_Column" msprop:Generator_UserColumnName="month_" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_History18Monthly" msprop:Generator_TableClassName="Tbl_History18MonthlyDataTable" msprop:Generator_TableVarName="tableTbl_History18Monthly" msprop:Generator_TablePropName="Tbl_History18Monthly" msprop:Generator_RowDeletingName="Tbl_History18MonthlyRowDeleting" msprop:Generator_RowChangingName="Tbl_History18MonthlyRowChanging" msprop:Generator_RowEvHandlerName="Tbl_History18MonthlyRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_History18MonthlyRowDeleted" msprop:Generator_UserTableName="Tbl_History18Monthly" msprop:Generator_RowChangedName="Tbl_History18MonthlyRowChanged" msprop:Generator_RowEvArgName="Tbl_History18MonthlyRowChangeEvent" msprop:Generator_RowClassName="Tbl_History18MonthlyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="YearNumber" msprop:Generator_ColumnVarNameInTable="columnYearNumber" msprop:Generator_ColumnPropNameInRow="YearNumber" msprop:Generator_ColumnPropNameInTable="YearNumberColumn" msprop:Generator_UserColumnName="YearNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="MonthNumber" msprop:Generator_ColumnVarNameInTable="columnMonthNumber" msprop:Generator_ColumnPropNameInRow="MonthNumber" msprop:Generator_ColumnPropNameInTable="MonthNumberColumn" msprop:Generator_UserColumnName="MonthNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="xaxis" msprop:Generator_ColumnVarNameInTable="columnxaxis" msprop:Generator_ColumnPropNameInRow="xaxis" msprop:Generator_ColumnPropNameInTable="xaxisColumn" msprop:Generator_UserColumnName="xaxis" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleOn" msprop:Generator_ColumnVarNameInTable="columnCycleOn" msprop:Generator_ColumnPropNameInRow="CycleOn" msprop:Generator_ColumnPropNameInTable="CycleOnColumn" msprop:Generator_UserColumnName="CycleOn" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleOff" msprop:Generator_ColumnVarNameInTable="columnCycleOff" msprop:Generator_ColumnPropNameInRow="CycleOff" msprop:Generator_ColumnPropNameInTable="CycleOffColumn" msprop:Generator_UserColumnName="CycleOff" type="xs:string" minOccurs="0" />
+              <xs:element name="SumSetup" msprop:Generator_ColumnVarNameInTable="columnSumSetup" msprop:Generator_ColumnPropNameInRow="SumSetup" msprop:Generator_ColumnPropNameInTable="SumSetupColumn" msprop:Generator_UserColumnName="SumSetup" type="xs:string" minOccurs="0" />
+              <xs:element name="SumOther" msprop:Generator_ColumnVarNameInTable="columnSumOther" msprop:Generator_ColumnPropNameInRow="SumOther" msprop:Generator_ColumnPropNameInTable="SumOtherColumn" msprop:Generator_UserColumnName="SumOther" type="xs:string" minOccurs="0" />
+              <xs:element name="Totalcycletime" msprop:Generator_ColumnVarNameInTable="columnTotalcycletime" msprop:Generator_ColumnPropNameInRow="Totalcycletime" msprop:Generator_ColumnPropNameInTable="TotalcycletimeColumn" msprop:Generator_UserColumnName="Totalcycletime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tbl_History18Daily" msprop:Generator_TableClassName="Tbl_History18DailyDataTable" msprop:Generator_TableVarName="tableTbl_History18Daily" msprop:Generator_TablePropName="Tbl_History18Daily" msprop:Generator_RowDeletingName="Tbl_History18DailyRowDeleting" msprop:Generator_RowChangingName="Tbl_History18DailyRowChanging" msprop:Generator_RowEvHandlerName="Tbl_History18DailyRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_History18DailyRowDeleted" msprop:Generator_UserTableName="Tbl_History18Daily" msprop:Generator_RowChangedName="Tbl_History18DailyRowChanged" msprop:Generator_RowEvArgName="Tbl_History18DailyRowChangeEvent" msprop:Generator_RowClassName="Tbl_History18DailyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MchName" msprop:Generator_ColumnVarNameInTable="columnMchName" msprop:Generator_ColumnPropNameInRow="MchName" msprop:Generator_ColumnPropNameInTable="MchNameColumn" msprop:Generator_UserColumnName="MchName" type="xs:string" minOccurs="0" />
+              <xs:element name="WeekNumber" msprop:Generator_ColumnVarNameInTable="columnWeekNumber" msprop:Generator_ColumnPropNameInRow="WeekNumber" msprop:Generator_ColumnPropNameInTable="WeekNumberColumn" msprop:Generator_UserColumnName="WeekNumber" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CycleOn" msprop:Generator_ColumnVarNameInTable="columnCycleOn" msprop:Generator_ColumnPropNameInRow="CycleOn" msprop:Generator_ColumnPropNameInTable="CycleOnColumn" msprop:Generator_UserColumnName="CycleOn" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleOff" msprop:Generator_ColumnVarNameInTable="columnCycleOff" msprop:Generator_ColumnPropNameInRow="CycleOff" msprop:Generator_ColumnPropNameInTable="CycleOffColumn" msprop:Generator_UserColumnName="CycleOff" type="xs:string" minOccurs="0" />
+              <xs:element name="SumSetup" msprop:Generator_ColumnVarNameInTable="columnSumSetup" msprop:Generator_ColumnPropNameInRow="SumSetup" msprop:Generator_ColumnPropNameInTable="SumSetupColumn" msprop:Generator_UserColumnName="SumSetup" type="xs:string" minOccurs="0" />
+              <xs:element name="SumOther" msprop:Generator_ColumnVarNameInTable="columnSumOther" msprop:Generator_ColumnPropNameInRow="SumOther" msprop:Generator_ColumnPropNameInTable="SumOtherColumn" msprop:Generator_UserColumnName="SumOther" type="xs:string" minOccurs="0" />
+              <xs:element name="Totalcycletime" msprop:Generator_ColumnVarNameInTable="columnTotalcycletime" msprop:Generator_ColumnPropNameInRow="Totalcycletime" msprop:Generator_ColumnPropNameInTable="TotalcycletimeColumn" msprop:Generator_UserColumnName="Totalcycletime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,226 @@
+﻿<Window x:Class="CSIFLEX.PartAnalyzer.Views.AdvancedSearchOptions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSIFLEX.PartAnalyzer.Views"
+        mc:Ignorable="d"
+         ResizeMode="NoResize"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="10" 
+        Height="300"
+        Width="600"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Advanced Search Options">
+    <Grid>
+        <Border CornerRadius="2"
+                        Grid.Row="1" 
+                        BorderBrush="LightGray"
+                        Margin="4,2"
+                        BorderThickness="1">
+            <StackPanel>
+                <TextBlock FontWeight="Bold"
+                                       FontSize="16"
+                                       TextAlignment="Center"
+                                       Text="Search affinity"/>
+                <Separator Margin="4"/>
+                <Border CornerRadius="2" 
+                                    BorderBrush="LightGray"
+                                    Margin="4,2"
+                                    BorderThickness="1" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="?"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="YellowGreen"
+                                               Grid.Column="2">
+                            <TextBlock.ToolTip>
+                                <TextBlock>
+                                             This turns on the option to search for the part trying to expand the time search. For example:
+                                        <LineBreak/>
+                                            A erp id returns has a part number ABC1234-123 and you set it to expand its time search by 3 times by an increment of 24 hours
+                                            <LineBreak/>
+                                            The production start date is January 1st 2019 6:00 AM and the production end date is January 1st 2019 15:00.
+                                            <LineBreak/>
+                                            First search starts with the default start and end dates.
+                                            <LineBreak/>
+                                            Second search starts with a start date of December 31st 2019 6:00 AM and end date is set to January 2nd 2019 15:00.
+                                            <LineBreak/>
+                                            Second search starts with a start date of December 30th 2019 6:00 AM and end date is set to January 3rd 2019 15:00.
+                                            <LineBreak/>
+                                            Ad nauseam
+                                </TextBlock>
+                            </TextBlock.ToolTip>
+                                    </TextBlock>
+                        <CheckBox IsChecked="{Binding IsIterateSearchOverDate,UpdateSourceTrigger=PropertyChanged}"
+                                              x:Name="SearchOverDate"
+                                              Margin="4,2"
+                                              Width="20"/>
+                        <TextBlock Margin="4,2"
+                                   Text="Growing time search window"
+                                   VerticalAlignment="Center"
+                                   Grid.Column="1"/>
+                        <Grid Grid.Row="1"
+                                          Grid.ColumnSpan="2"
+                                          IsEnabled="{Binding ElementName=SearchOverDate, Path=IsChecked}"  >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="50"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Hour"
+                                                   FontSize="10"
+                                                   VerticalAlignment="Center"
+                                                   Margin="4,2"/>
+                            <xctk:IntegerUpDown Margin="4,2"
+                                                            Grid.Column="1" 
+                                                            Value="{Binding HourWindowValue,UpdateSourceTrigger=PropertyChanged}" 
+                                                            Minimum="0"/>
+                            <TextBlock Text="Mins"
+                                                   FontSize="10"
+                                                   VerticalAlignment="Center"
+                                                   Grid.Column="2"
+                                                   Margin="4,2"/>
+                            <xctk:IntegerUpDown Margin="4,2"
+                                                            Grid.Column="3" 
+                                                            Value="{Binding MinuteWindowValue,UpdateSourceTrigger=PropertyChanged}" 
+                                                            Minimum="0"/>
+                            <TextBlock Text="Tries"
+                                                   Grid.Column="4"
+                                                   FontSize="10"
+                                                   VerticalAlignment="Center"
+                                                   Margin="4,2"/>
+                            <xctk:IntegerUpDown Margin="4,2"
+                                                            Grid.Column="5" 
+                                                            Value="{Binding TimeWindowSearchIterations,UpdateSourceTrigger=PropertyChanged}" 
+                                                            Minimum="0"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Separator Margin="4"
+                           Foreground="LightGray"/>
+
+                <Border CornerRadius="2" 
+                                    Padding="4"
+                                    BorderBrush="LightGray"
+                                    Margin="4,2"
+                                    BorderThickness="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="?"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="YellowGreen"
+                                               Grid.Column="2">
+                            <TextBlock.ToolTip>
+                                <TextBlock>
+                                             This turns on the option to search for the part by truncating the last few characters of the part id over. Note the last remaining search will always be 4 characters. For example:
+                                        <LineBreak/>
+                                            A erp id returns has a part number ABC1234-123. You set it be split 4 times in attempt to search the CSIFLEX database
+                                            <LineBreak/>
+                                            for a possible set of hits. 
+                                            <LineBreak/>
+                                            First search starts with ABC1234-123
+                                            <LineBreak/>
+                                            Second search starts with ABC1234-12
+                                            <LineBreak/>
+                                            Third search starts with ABC1234-1
+                                            <LineBreak/>
+                                            Ad nauseam
+                                </TextBlock>
+                            </TextBlock.ToolTip>
+                                    </TextBlock>
+                        <CheckBox IsChecked="{Binding IsIteratingOverPartName,UpdateSourceTrigger=PropertyChanged}"
+                                              x:Name="IterationOverPartName"
+                                                      Margin="4,2"
+                                                      Width="20"/>
+                        <TextBlock Margin="4,2"
+                                   Text="Iterate over part name"
+                                   IsEnabled="{Binding ElementName=IterationOverPartName , Path=IsChecked}"
+                                   VerticalAlignment="Center"
+                                   Grid.Column="1"/>
+                        <xctk:IntegerUpDown Grid.Row="2"
+                                            IsEnabled="{Binding ElementName=IterationOverPartName , Path=IsChecked}"
+                                            Grid.Column="1" 
+                                            Minimum="0"
+                                            Value="{Binding IterativeSearchPartNameValue,UpdateSourceTrigger=PropertyChanged}"
+                                            Margin="4,2"/>
+                    </Grid>
+                </Border>
+
+                <Separator Margin="4"
+                           Foreground="LightGray"/>
+                <Border CornerRadius="2" 
+                                    BorderBrush="LightGray"
+                                    Margin="4"
+                                    Padding="4"
+                                    BorderThickness="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="1"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="?"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="YellowGreen"
+                                               Grid.Column="2">
+                            <TextBlock.ToolTip>
+                                <TextBlock>
+                                             This turns on the option to search for the part by iteravely truncating characters that are preceded by hyphens(-). For example:
+                                        <LineBreak/>
+                                            A erp id returns has a part number ABC1234-123-456. 
+                                            <LineBreak/>  
+                                            First search starts with ABC1234-123-456
+                                            <LineBreak/>
+                                            Second search starts with ABC1234-123
+                                            <LineBreak/>
+                                            Third search starts with ABC1234-123
+                                </TextBlock>
+                            </TextBlock.ToolTip>
+                                    </TextBlock>
+                        <CheckBox IsChecked="{Binding IsSplittingHyphens}"
+                                              Margin="4,2"
+                                              Width="20"/>
+                        <TextBlock Margin="4,2"
+                                   Text="Search by removing hyphenations"
+                                   Grid.Column="1"/>
+
+                    </Grid>
+                </Border>                 
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

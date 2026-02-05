@@ -1,0 +1,31 @@
+MC2_LAB
+Condition alert for machine MC2_LAB : Warning: Coolant Low, since 2016-September-09 15:14:50 .
+<li class="dd-item" data-id=MC2_LAB><div class="dd-handle"> MC2_LAB </div><ol class="dd-list"><li class="dd-item" data-id=axes_4><div class="dd-handle"> axes </div><ol class="dd-list"><li class="dd-item" data-id=X_5><div class="dd-handle"> X </div><ol class="dd-list"><li class="dd-item" data-id=X_6><tr><td><b>xLoad : </b></td> <td> 0</td></tr></li>
+<li class="dd-item" data-id=X_7><tr><td><b>xPosition : </b></td> <td> </td></tr></li>
+<li class="dd-item" data-id=X_8><tr><td><b>travel : </b></td> <td> Normal</td></tr></li>
+<li class="dd-item" data-id=X_9><tr><td><b>overload : </b></td> <td> Fault: Axis overload</td></tr></li>
+</ol></li>
+<li class="dd-item" data-id=C_1><div class="dd-handle"> C </div><ol class="dd-list"><li class="dd-item" data-id=C_6><tr><td><b>sLoad : </b></td> <td> 0</td></tr></li>
+<li class="dd-item" data-id=C_7><tr><td><b>sSpeed : </b></td> <td> </td></tr></li>
+</ol></li>
+</ol></li>
+<li class="dd-item" data-id=controller_10><div class="dd-handle"> controller </div><ol class="dd-list"><li class="dd-item" data-id=controller_11><tr><td><b>mode : </b></td> <td> AUTOMATIC</td></tr></li>
+<li class="dd-item" data-id=controller_12><tr><td><b>exec : </b></td> <td> ACTIVE</td></tr></li>
+<li class="dd-item" data-id=controller_13><tr><td><b>program : </b></td> <td> </td></tr></li>
+<li class="dd-item" data-id=controller_14><tr><td><b>message : </b></td> <td> UNAVAILABLE</td></tr></li>
+<li class="dd-item" data-id=controller_15><tr><td><b>system : </b></td> <td> Fault: No program loaded</td></tr></li>
+<li class="dd-item" data-id=controller_16><tr><td><b>temp : </b></td> <td> Normal</td></tr></li>
+<li class="dd-item" data-id=cv_117><tr><td><b>cv : </b></td> <td> 21:1 22:2 23:3 24:4</td></tr></li>
+</ol></li>
+<li class="dd-item" data-id=systems_17><div class="dd-handle"> systems </div><ol class="dd-list"><li class="dd-item" data-id=coolant_18><div class="dd-handle"> coolant </div><ol class="dd-list"><li class="dd-item" data-id=coolant_19><tr><td><b>cool_low : </b></td> <td> Warning: Coolant Low</td></tr></li>
+</ol></li>
+</ol></li>
+<li class="dd-item" data-id=audio_20><div class="dd-handle"> audio </div><ol class="dd-list"><li class="dd-item" data-id=audio_21><tr><td><b>audio : </b></td> <td> </td></tr></li>
+</ol></li>
+</ol></li>
+<li class="dd-item" data-id=dtop_3><tr><td><b>Availability  : </b></td> <td> AVAILABLE</td></tr></li>
+<li class="dd-item" data-id=dtop_2><tr><td><b>EmergencyStop  : </b></td> <td> ARMED</td></tr></li>
+<li class="dd-item" data-id=dtop_5><tr><td><b>FunctionalMode  : </b></td> <td> SETUP</td></tr></li>
+<li class="dd-item" data-id=MC2_LAB_1_asset_chg><tr><td><b>AssetChanged  : </b></td> <td> UNAVAILABLE</td></tr></li>
+<li class="dd-item" data-id=MC2_LAB_1_asset_rem><tr><td><b>AssetRemoved  : </b></td> <td> UNAVAILABLE</td></tr></li>
+

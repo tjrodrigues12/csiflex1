@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DF798C0-429B-48F4-A3FB-C7BF35D8CF90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CSI_Reporting_Application.My.MyApplication</StartupObject>
+    <RootNamespace>CSI_Reporting_Application</RootNamespace>
+    <AssemblyName>CSIFLEX.Server</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\temp_\CSIFLEX\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>CSIFLEX Reporting Application</ProductName>
+    <PublisherName>CAM Solutions</PublisherName>
+    <SuiteName>CSIFLEX Reporting Application</SuiteName>
+    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationVersion>1.9.1.26</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CSIFLEX.Server.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CSIFLEX.Server.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Artboard_1167.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CSI Reporting Application Server_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2E1F614693FAC2A64FE9611046DDFB0A532D2602</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSIFLEX.Connectware.Data.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CSIFLEX.Connectware.Data.Common.1.0.0\lib\netstandard2.0\CSIFLEX.Connectware.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CSIFLEX.Server">
+      <HintPath>obj\Debug\CSIFLEX.Server.exe</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExpandableGridView">
+      <HintPath>..\..\dll\ExpandableGridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.9.1.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LumenWorksCsvReader.3.9.1\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySqlBackup.NET.2.0.12\lib\net45\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NetOffice.Core.Net40.1.7.4.4\lib\net40\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\packages\NLog.4.6.8\lib\netstandard2.0\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NetOffice.Core.Net40.1.7.4.4\lib\net40\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="rpnParser">
+      <HintPath>..\..\dll\rpnParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.EventLog.4.7.0\lib\net461\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.PerformanceCounter.4.5.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceProcess.ServiceController, Version=4.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ServiceProcess.ServiceController.4.7.0\lib\net461\System.ServiceProcess.ServiceController.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TimelineExLib, Version=2.0.2.41912, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Timeline.2.0.2.41912\lib\net40\TimelineExLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TimelineLibrary, Version=2.0.2.41912, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Timeline.2.0.2.41912\lib\net40\TimelineLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NetOffice.Core.Net40.1.7.4.4\lib\net40\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO.Compression" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDevice.Designer.vb">
+      <DependentUpon>AddDevice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddDevice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExternalSource.Designer.vb">
+      <DependentUpon>AddExternalSource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddExternalSource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adv_MTC_cond_edit.Designer.vb">
+      <DependentUpon>Adv_MTC_cond_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adv_MTC_cond_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adv_mtc_Notifications.Designer.vb">
+      <DependentUpon>adv_mtc_Notifications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adv_mtc_Notifications.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AutoReporting.designer.vb">
+      <DependentUpon>AutoReporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutoReporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\AllStringConstants.vb" />
+    <Compile Include="Classes\DashboardDevice.vb" />
+    <Compile Include="Classes\FocasInstaller.vb" />
+    <Compile Include="Classes\IPMacMapper.vb" />
+    <Compile Include="Classes\Services.vb" />
+    <Compile Include="Classes\TimelineChange.vb" />
+    <Compile Include="Classes\UserProfile.vb" />
+    <Compile Include="Config dash\config_.Designer.vb">
+      <DependentUpon>config_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config dash\config_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config dash\GeneralSettings.Designer.vb">
+      <DependentUpon>GeneralSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config dash\GeneralSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config dash\LR1_preview.Designer.vb">
+      <DependentUpon>LR1_preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config dash\LR1_preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config dash\TextBrowser_Scale.Designer.vb">
+      <DependentUpon>TextBrowser_Scale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config dash\TextBrowser_Scale.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Config.Designer.vb">
+      <DependentUpon>Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureService.Designer.vb">
+      <DependentUpon>ConfigureService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigureService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PartNumberControl.Designer.vb">
+      <DependentUpon>PartNumberControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PartNumberControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TimelineEditControl.Designer.vb">
+      <DependentUpon>TimelineEditControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimelineEditControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomEmailMsg.Designer.vb">
+      <DependentUpon>CustomEmailMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEmailMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="demo graphs\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="demo graphs\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_logfile.Designer.vb">
+      <DependentUpon>Edit_logfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_logfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Focas.Designer.vb">
+      <DependentUpon>Edit_Focas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Focas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailServer.Designer.vb">
+      <DependentUpon>EmailServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmailServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnetToMtc.Designer.vb">
+      <DependentUpon>EnetToMtc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EnetToMtc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FocasADD.Designer.vb">
+      <DependentUpon>FocasADD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FocasADD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSIFLEXGlobal.vb" />
+    <Compile Include="InitialSetup.Designer.vb">
+      <DependentUpon>InitialSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InitialSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitialSetup2.Designer.vb">
+      <DependentUpon>InitialSetup2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InitialSetup2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalServer\InternalWebServer.Designer.vb">
+      <DependentUpon>InternalWebServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InternalServer\InternalWebServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalServer\Server.vb" />
+    <Compile Include="LicenseManagement.Designer.vb">
+      <DependentUpon>LicenseManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadHistory.Designer.vb">
+      <DependentUpon>LoadHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoadHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB_FocasIP_Port.Designer.vb">
+      <DependentUpon>MB_FocasIP_Port.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MB_FocasIP_Port.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitoringUnitsList.Designer.vb">
+      <DependentUpon>MonitoringUnitsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringUnitsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mtcADD.Designer.vb">
+      <DependentUpon>mtcADD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mtcADD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTCcondition.Designer.vb">
+      <DependentUpon>MTCcondition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MTCcondition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_eNET.Designer.vb">
+      <DependentUpon>Edit_eNET.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_eNET.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_mtconnect.Designer.vb">
+      <DependentUpon>Edit_mtconnect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_mtconnect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MtcFocasADD.Designer.vb">
+      <DependentUpon>MtcFocasADD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MtcFocasADD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Changes.Designer.vb">
+      <DependentUpon>Changes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Changes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\Database performance tuning.Designer.vb">
+      <DependentUpon>Database performance tuning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\Database performance tuning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\DB_init.Designer.vb">
+      <DependentUpon>DB_init.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\DB_init.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\help_tuning.Designer.vb">
+      <DependentUpon>help_tuning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\help_tuning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\importDB.Designer.vb">
+      <DependentUpon>importDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\importDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\IP_choice.Designer.vb">
+      <DependentUpon>IP_choice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\IP_choice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\NetworkSetting.Designer.vb">
+      <DependentUpon>NetworkSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\NetworkSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoreSettings.Designer.vb">
+      <DependentUpon>RestoreSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RestoreSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMConfig.Designer.vb">
+      <DependentUpon>RMConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RMConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Select_Years.Designer.vb">
+      <DependentUpon>Select_Years.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Years.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetMinMaxValues.Designer.vb">
+      <DependentUpon>SetMinMaxValues.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetMinMaxValues.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupForm.Designer.vb">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protection\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Protection\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupForm2.Designer.vb">
+      <DependentUpon>SetupForm2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetupForm2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFormConnectors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFormDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFormEnetServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFormGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupFormUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SockConn.designer.vb">
+      <DependentUpon>SockConn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SockConn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SynchroDB.Designer.vb">
+      <DependentUpon>SynchroDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SynchroDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="targetServer.designer.vb">
+      <DependentUpon>targetServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="targetServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeDate.Designer.vb">
+      <DependentUpon>TimeDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TimeDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UninstallAndBackUp.Designer.vb">
+      <DependentUpon>UninstallAndBackUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UninstallAndBackUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\SelectUserType.Designer.vb">
+      <DependentUpon>SelectUserType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users\SelectUserType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\UserLogin.Designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processing.Designer.vb">
+      <DependentUpon>Processing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Processing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDevice.resx">
+      <DependentUpon>AddDevice.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExternalSource.resx">
+      <DependentUpon>AddExternalSource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adv_MTC_cond_edit.resx">
+      <DependentUpon>Adv_MTC_cond_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adv_mtc_Notifications.resx">
+      <DependentUpon>adv_mtc_Notifications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoReporting.resx">
+      <DependentUpon>AutoReporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config dash\config_.resx">
+      <DependentUpon>config_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config dash\GeneralSettings.resx">
+      <DependentUpon>GeneralSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config dash\LR1_preview.resx">
+      <DependentUpon>LR1_preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config dash\TextBrowser_Scale.resx">
+      <DependentUpon>TextBrowser_Scale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Config.resx">
+      <DependentUpon>Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigureService.resx">
+      <DependentUpon>ConfigureService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PartNumberControl.resx">
+      <DependentUpon>PartNumberControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TimelineEditControl.resx">
+      <DependentUpon>TimelineEditControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomEmailMsg.resx">
+      <DependentUpon>CustomEmailMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demo graphs\Demoreport.rdlc" />
+    <EmbeddedResource Include="demo graphs\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_logfile.resx">
+      <DependentUpon>Edit_logfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Focas.resx">
+      <DependentUpon>Edit_Focas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailServer.resx">
+      <DependentUpon>EmailServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnetToMtc.resx">
+      <DependentUpon>EnetToMtc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FocasADD.resx">
+      <DependentUpon>FocasADD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialSetup.resx">
+      <DependentUpon>InitialSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitialSetup2.resx">
+      <DependentUpon>InitialSetup2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalServer\InternalWebServer.resx">
+      <DependentUpon>InternalWebServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseManagement.resx">
+      <DependentUpon>LicenseManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadHistory.resx">
+      <DependentUpon>LoadHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MB_FocasIP_Port.resx">
+      <DependentUpon>MB_FocasIP_Port.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonitoringUnitsList.resx">
+      <DependentUpon>MonitoringUnitsList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mtcADD.resx">
+      <DependentUpon>mtcADD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTCcondition.resx">
+      <DependentUpon>MTCcondition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_eNET.resx">
+      <DependentUpon>Edit_eNET.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_mtconnect.resx">
+      <DependentUpon>Edit_mtconnect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MtcFocasADD.resx">
+      <DependentUpon>MtcFocasADD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Changes.resx">
+      <DependentUpon>Changes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\Database performance tuning.resx">
+      <DependentUpon>Database performance tuning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\DB_init.resx">
+      <DependentUpon>DB_init.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\help_tuning.resx">
+      <DependentUpon>help_tuning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\importDB.resx">
+      <DependentUpon>importDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\IP_choice.resx">
+      <DependentUpon>IP_choice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\NetworkSetting.resx">
+      <DependentUpon>NetworkSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports_templatesold\EventMainDaily.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\EventMainReport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\EventSubdailyreport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\EventSubReport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\mainDaily.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\mainMonthly.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\mainReport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\mainWeekly.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\subdailyreport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\SubMonthly.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\SubReport.rdlc" />
+    <EmbeddedResource Include="reports_templatesold\SubWeekly.rdlc" />
+    <EmbeddedResource Include="RestoreSettings.resx">
+      <DependentUpon>RestoreSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMConfig.resx">
+      <DependentUpon>RMConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Select_Years.resx">
+      <DependentUpon>Select_Years.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetMinMaxValues.resx">
+      <DependentUpon>SetMinMaxValues.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupForm.resx">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protection\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupForm2.resx">
+      <DependentUpon>SetupForm2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SockConn.resx">
+      <DependentUpon>SockConn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SynchroDB.resx">
+      <DependentUpon>SynchroDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="targetServer.resx">
+      <DependentUpon>targetServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeDate.resx">
+      <DependentUpon>TimeDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallAndBackUp.resx">
+      <DependentUpon>UninstallAndBackUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\SelectUserType.resx">
+      <DependentUpon>SelectUserType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processing.resx">
+      <DependentUpon>Processing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Class Diagrams\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="Class Diagrams\SuccessLogIn.dgml" />
+    <None Include="CSI Reporting Application Server_TemporaryKey.pfx" />
+    <None Include="focasadapters\adapter.ini" />
+    <None Include="focasagent\agent.cfg" />
+    <None Include="focasagent\agent.log" />
+    <None Include="Graphs\PieChartFindings.dgml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\DataSources\CSI_Library.CSI_Library.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.CachingSha2AuthenticationPlugin.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.MySqlNativePasswordPlugin.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.SecBuffer.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.SecHandle.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.SecPkgContext_Sizes.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.SECURITY_HANDLE.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.SECURITY_INTEGER.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Authentication.Sha256AuthenticationPlugin.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.AuthenticationPluginConfigurationElement.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseCommandInterceptor.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseExceptionInterceptor.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.BaseTableCache.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.InterceptorConfigurationElement.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Memcached.BinaryClient.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Memcached.Client.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Memcached.MemcachedException.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Memcached.TextClient.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlClientPermission.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlClientPermissionAttribute.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlCommandBuilder.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlConfiguration.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlConnection.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlConnectionStringBuilder.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlDataAdapter.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlDataReader.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlError.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlException.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlHelper.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventArgs.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventHandler.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlParameter.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlParameterCollection.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventArgs.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventHandler.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventArgs.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventHandler.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlSchemaCollection.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlSchemaRow.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlScript.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventArgs.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventHandler.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlScriptEventArgs.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlSecurityPermission.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlStatementExecutedEventHandler.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlTrace.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.MySqlTransaction.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Properties.Resources.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Replication.ReplicationRoundRobinServerGroup.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Replication.ReplicationServer.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.Replication.ReplicationServerGroup.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.ReplicationConfigurationElement.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.ReplicationServerConfigurationElement.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.ReplicationServerGroupConfigurationElement.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.SchemaColumn.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.MySqlClient.StringUtility.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.Types.MySqlConversionException.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.Types.MySqlDateTime.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.Types.MySqlDecimal.datasource" />
+    <None Include="My Project\DataSources\MySql.Data.Types.MySqlGeometry.datasource" />
+    <None Include="My Project\DataSources\MySqlPemReader.datasource" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="reports_templatesold\mainWeekly.zip" />
+    <None Include="Resources\back992.jpg" />
+    <None Include="Resources\330fxx2.jpg" />
+    <None Include="Resources\330fxx2-v2.jpg" />
+    <None Include="Resources\50px-Warning_icon.svg.png" />
+    <None Include="Resources\aero.png" />
+    <None Include="Resources\0.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\01744_dolph_1920x1080.jpg" />
+    <None Include="Resources\appbar.book.perspective.help.png" />
+    <None Include="Resources\appbar.browser.wire.png" />
+    <None Include="Resources\appbar.calendar.png" />
+    <None Include="Resources\appbar.close.png" />
+    <None Include="Resources\appbar.cog.png" />
+    <None Include="Resources\appbar.cogs.png" />
+    <None Include="Resources\appbar.database.png" />
+    <None Include="Resources\appbar.graph.line.up.png" />
+    <None Include="Resources\appbar.office.excel.png" />
+    <None Include="Resources\339927.gif" />
+    <None Include="Resources\alert_animated.gif" />
+    <None Include="Resources\avm_schloss.gif" />
+    <None Include="Resources\ArrowDownGreenGloss.gif" />
+    <None Include="Resources\arrow animation.GIF" />
+    <None Include="Resources\1132444.9a208844a94822c3529bf8d8cc660d97.gif" />
+    <Content Include="Artboard 180.ico" />
+    <Content Include="Artboard_1167.ico" />
+    <Content Include="focasadapters\fanuc_0i.exe" />
+    <Content Include="focasadapters\fanuc_15i.exe" />
+    <Content Include="focasadapters\fanuc_30i.exe" />
+    <Content Include="focasadapters\Fwlib32.dll" />
+    <Content Include="focasadapters\Fwlib64.dll" />
+    <Content Include="focasagent\agent.exe" />
+    <Content Include="focasagent\Fanuc0i.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\81924-setting-spanner.png" />
+    <Content Include="Resources\Background.jpg" />
+    <None Include="Resources\barre.jpg" />
+    <None Include="Resources\barre2.jpg" />
+    <None Include="Resources\Blue-background-blurred.jpg" />
+    <None Include="Resources\C1-3D.png" />
+    <None Include="Resources\BG.png" />
+    <None Include="Resources\carousel_blue_1.jpg" />
+    <None Include="Resources\computer_support_icon.png" />
+    <None Include="Resources\blue-and-white-wallpaper-8910-9250-hd-wallpapers.jpg" />
+    <None Include="Resources\CamSolLogo.png" />
+    <None Include="Resources\bg1920x1080.jpg" />
+    <None Include="Resources\background_communications.jpg" />
+    <None Include="Resources\bgi.jpg" />
+    <None Include="Resources\cloud-ready.png" />
+    <None Include="Resources\cogs.png" />
+    <None Include="Resources\CSIFLEX.png" />
+    <None Include="Resources\CSIFLEXLOGOTR2.png" />
+    <None Include="Resources\exclamation-mark.png" />
+    <None Include="Resources\exclamation_icon.jpg" />
+    <None Include="Resources\d.png" />
+    <None Include="Resources\custom-reports.png" />
+    <None Include="Resources\flow.png" />
+    <None Include="Resources\CON_.gif" />
+    <None Include="Resources\drawn_arrow.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\cnca-28x28.jpg" />
+    <None Include="Resources\CSIFLEX_lightout_LOGOTR.png" />
+    <None Include="Resources\cancel-button-icon-63471.png" />
+    <None Include="Resources\cancel-button-icon-634711.png" />
+    <None Include="Resources\Check-mark-button-hi.png" />
+    <None Include="Resources\csiflex-logo-blue.png" />
+    <None Include="Resources\csiflex-logo-blue.jpg" />
+    <Content Include="Resources\BlueBar.png" />
+    <None Include="Resources\csi_lt_bgArtboard 1.png" />
+    <None Include="Resources\CSIFLEX_New_Icon.png" />
+    <None Include="Resources\confirme.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\CSIFLEX_New_Logo_167.png" />
+    <None Include="Resources\csiflex_panelv4.png" />
+    <None Include="Resources\csiflex_panelv6.png" />
+    <None Include="Resources\CSIFLEX_Background.png" />
+    <None Include="Resources\CSIFLEX_Logo_dkbg.png" />
+    <None Include="Resources\csiflex_panelv7.png" />
+    <Content Include="Resources\FANUC.jpg" />
+    <None Include="Resources\feature5.png" />
+    <Content Include="Resources\fond-gris-degrade.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\rect.jpg" />
+    <None Include="Resources\repview_needs.zip" />
+    <None Include="Resources\round.jpg" />
+    <None Include="Resources\return.jpg" />
+    <None Include="Resources\gif-8.gif" />
+    <None Include="Resources\GraphColor.txt" />
+    <None Include="Resources\home-web-icon-300x300.jpg" />
+    <None Include="Resources\free-vector-chart-icons_main.png" />
+    <None Include="Resources\logo_0_0.png" />
+    <None Include="Resources\MTConnectLogo.jpg" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\processing.gif" />
+    <None Include="Resources\MC900442150[1].png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\logo.gif" />
+    <None Include="Resources\Kcjx7zKcq.gif" />
+    <None Include="Resources\package_editors.png" />
+    <None Include="Resources\MergeJoin-64x64.png" />
+    <None Include="Resources\Modify_edit_pencil_layout.png" />
+    <None Include="Resources\node-tree.png" />
+    <None Include="Resources\leverage-connect.png" />
+    <None Include="Resources\mobil-ready.png" />
+    <None Include="Resources\real-time.png" />
+    <None Include="Resources\scalable.png" />
+    <None Include="Resources\server-based.png" />
+    <None Include="Resources\redring.med.png" />
+    <None Include="Resources\green_ring.png" />
+    <None Include="Resources\put_information_to_work_2.png" />
+    <None Include="Resources\raports.png" />
+    <None Include="Resources\piechart.JPG" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\mark-35780_640.png" />
+    <Content Include="Resources\GreenBar.png" />
+    <None Include="Resources\icon_plus-circle.png" />
+    <None Include="Resources\icon_plus-circle_64.png" />
+    <None Include="Resources\icons8-check-circle-40.png" />
+    <None Include="Resources\icons8-cancel-40.png" />
+    <None Include="Resources\icons8-add-256.png" />
+    <None Include="Resources\icons8-check-circle-40-2.png" />
+    <None Include="Resources\icons8-cancel-40-2.png" />
+    <None Include="Resources\icons8-add-256-2.png" />
+    <Content Include="Resources\marketing-analysis-icon-32.png" />
+    <None Include="Resources\ok.jpg" />
+    <None Include="Resources\ok1.jpg" />
+    <None Include="Resources\red-cancel-hi.png" />
+    <None Include="Resources\pencil-draw-edit-sketch-tool-3d459782aa34d16b-512x512.png" />
+    <None Include="Resources\play-32.png" />
+    <None Include="Resources\player_stop.png" />
+    <None Include="Resources\player_play.png" />
+    <Content Include="Resources\RedBar.png" />
+    <Content Include="Resources\Refresh.png" />
+    <None Include="Resources\Refresh1.png" />
+    <Content Include="Resources\repair-3-512.png" />
+    <None Include="Resources\right-button-png-image-18696.png" />
+    <Content Include="Resources\set-of-light-blue-background.jpg" />
+    <None Include="Resources\Spline.jpg" />
+    <None Include="Resources\Spline2.jpg" />
+    <None Include="Resources\setup.png" />
+    <None Include="Resources\start_button.gif" />
+    <None Include="Resources\targets.png" />
+    <Content Include="Resources\setting.png" />
+    <Content Include="Resources\Settings-icon.png" />
+    <None Include="Resources\stop-32.png" />
+    <None Include="Resources\spanelv5.png" />
+    <None Include="Resources\spanelv5-2.png" />
+    <Content Include="Resources\texture-shading-glare-gradient-background_p.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\warn.png" />
+    <None Include="Resources\transparent.gif" />
+    <None Include="Resources\tumblr_me9j27MWqg1rf78nfo1_400.gif" />
+    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\thumb_SMART_430A.jpg" />
+    <None Include="Resources\why-icon-7.jpg" />
+    <None Include="Resources\trashcan_delete.png" />
+    <None Include="Resources\user-friendly.png" />
+    <None Include="Resources\Updrawn-arrow.png" />
+    <None Include="Resources\thumb_Control_Panel-2.png" />
+    <None Include="Resources\your_success_1c.png" />
+    <None Include="Resources\your_success_.png" />
+    <None Include="Resources\Very-Basic-Code-icon.png" />
+    <Content Include="Resources\Three-bars.png" />
+    <Content Include="..\..\mysql\SqlServerTypes\Loader.cs" />
+    <Content Include="..\..\mysql\SqlServerTypes\readme.htm" />
+    <Content Include="..\..\mysql\nativeBinaries\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\mysql\nativeBinaries\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\mysql\nativeBinaries\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\mysql\nativeBinaries\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\YellowBar.png" />
+    <Content Include="Three-bars.ico" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\Daily.xlsx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CSIFLEX.eNET.Library\CSIFLEX.eNetLibrary\CSIFLEX.eNetLibrary.csproj">
+      <Project>{2b10f5a1-1231-4c4e-8aa9-fd12b090998f}</Project>
+      <Name>CSIFLEX.eNetLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CSIFLEX.Utilities\CSIFLEX.Utilities\CSIFLEX.Utilities.csproj">
+      <Project>{F7D8C05B-BFF8-4F17-B4ED-3CA34DE0736C}</Project>
+      <Name>CSIFLEX.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CSIFLEX.Utilities\CSIFLEX.Utilities\CSIFLEX.Utilities.csproj">
+      <Project>{f7d8c05b-bff8-4f17-b4ed-3ca34de0736c}</Project>
+      <Name>CSIFLEX.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eNETConex\CSIFLEX_Connectors\CSIFLEX.License.Library\CSIFLEX.License.Library.csproj">
+      <Project>{79692f50-1904-4c97-ac6d-85ec1e6424f0}</Project>
+      <Name>CSIFLEX.License.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eNETConex\CSIFLEX_Connectors\CSIFLEX.Lisence.Data\CSIFLEX.License.Data.csproj">
+      <Project>{d063cf0f-7d79-45b9-a211-2b1c1adc5720}</Project>
+      <Name>CSIFLEX.License.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eNETConex\CSIFLEX_Connectors\CSIFLEX.Lisence.Data\CSIFLEX.License.Data.csproj">
+      <Project>{d063cf0f-7d79-45b9-a211-2b1c1adc5720}</Project>
+      <Name>CSIFLEX.License.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Database.Access\CSIFLEX.Database.Access.csproj">
+      <Project>{DEE00893-FFAA-4DAB-BA9B-43E4AEBFCA75}</Project>
+      <Name>CSIFLEX.Database.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.FocasConnector\CSIFLEX.FocasConnector.csproj">
+      <Project>{31cedbe6-f282-4909-ae24-1fcfd03b65f7}</Project>
+      <Name>CSIFLEX.FocasConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Reporting.Service\CSIFLEX.Reporting.Service.csproj">
+      <Project>{622c71f3-f19b-464d-8ddd-5cccfa68279d}</Project>
+      <Name>CSIFLEX.Reporting.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Reports.Server\CSIFLEX.Reports.Server.csproj">
+      <Project>{48f7abcd-50a4-4e6e-ba9b-489fd8c37661}</Project>
+      <Name>CSIFLEX.Reports.Server</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Server.Library\CSIFLEX.Server.Library.csproj">
+      <Project>{0097ac0f-8bd4-4261-8359-a48e7633b736}</Project>
+      <Name>CSIFLEX.Server.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Server.Settings\CSIFLEX.Server.Settings.csproj">
+      <Project>{2A608C6F-11C6-4F3D-B0A5-58CB18AAB112}</Project>
+      <Name>CSIFLEX.Server.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSI_Library\CSI_Library\CSI_Library.vbproj">
+      <Project>{269289d7-2757-4751-936b-08e7551b6bbd}</Project>
+      <Name>CSI_Library</Name>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Encryption.Utilities\Encryption.Utilities.csproj">
+      <Project>{5627cdf1-5e14-420d-9f71-551849d542c5}</Project>
+      <Name>Encryption.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\CSIF_Service\CSIFlexServerService.vbproj">
+      <Project>{809a5cc1-697d-4493-9b2c-4bcc7df83105}</Project>
+      <Name>CSIFlexServerService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\DLL\OpenNETCF.MTConnect.Client\OpenNETCF.MTConnect.Client.FFx.csproj">
+      <Project>{e171643a-7edd-4ad6-ab26-4ed13e6f2aef}</Project>
+      <Name>OpenNETCF.MTConnect.Client.FFx</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\DLL\OpenNETCF.MTConnect.Common\OpenNETCF.MTConnect.Common.FFX.csproj">
+      <Project>{92b182ee-e5d6-4706-a668-d9065fdc9624}</Project>
+      <Name>OpenNETCF.MTConnect.Common.FFX</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\Rpn_function\Rpn_function.csproj">
+      <Project>{38741da4-6959-4db1-b0d9-5965205bd366}</Project>
+      <Name>Rpn_function</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\ServiceTools\ServiceTools.csproj">
+      <Project>{51984d91-884b-4336-b006-863c6aea7258}</Project>
+      <Name>ServiceTools</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FocasLibrary\FocasLibrary.csproj">
+      <Project>{AA5E999C-E7B0-476C-A5EC-E783A06E4A4E}</Project>
+      <Name>FocasLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AxInterop.AcroPDFLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.AcroPDFLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Daily.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\fond-gris-degrade.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- <Import Project="..\..\MTConnect\packages\MathNet.Numerics.MKL.Win.2.0.0\build\MathNet.Numerics.MKL.Win.targets" Condition="Exists('..\..\MTConnect\packages\MathNet.Numerics.MKL.Win.2.0.0\build\MathNet.Numerics.MKL.Win.targets')" /> -->
+  <!-- <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild"> -->
+  <!-- <PropertyGroup> -->
+  <!-- <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText> -->
+  <!-- </PropertyGroup> -->
+  <!-- <Error Condition="!Exists('..\..\MTConnect\packages\MathNet.Numerics.MKL.Win.2.0.0\build\MathNet.Numerics.MKL.Win.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\MTConnect\packages\MathNet.Numerics.MKL.Win.2.0.0\build\MathNet.Numerics.MKL.Win.targets'))" /> -->
+  <!-- <Error Condition="!Exists('packages\MathNet.Numerics.MKL.Win.2.3.0\build\MathNet.Numerics.MKL.Win.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MathNet.Numerics.MKL.Win.2.3.0\build\MathNet.Numerics.MKL.Win.targets'))" /> -->
+  <!-- </Target> -->
+  <!-- <Import Project="packages\MathNet.Numerics.MKL.Win.2.3.0\build\MathNet.Numerics.MKL.Win.targets" Condition="Exists('packages\MathNet.Numerics.MKL.Win.2.3.0\build\MathNet.Numerics.MKL.Win.targets')" /> -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+CREATE PROCEDURE `usp_GetAllMonSetup`()
+BEGIN
+select * from tbl_monsetup;
+END

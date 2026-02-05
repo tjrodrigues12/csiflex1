@@ -1,0 +1,8 @@
+CREATE PROCEDURE `test_proc`()
+BEGIN
+DECLARE mon_track INT unsigned DEFAULT 0;
+	set mon_track= (select monitoring_on_track from csi_enetdata.tbl_monsetup where machine_temp_filename='MonitorData12.SYS_');
+	
+select mon_track;
+
+END

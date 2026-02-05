@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenNETCF.MTConnect.EntityClient">
+    <Position X="1" Y="3" Width="2.25" />
+    <Members>
+      <Method Name="EntityClient" Hidden="true" />
+      <Field Name="m_nextSequence" Hidden="true" />
+      <Method Name="ResetSequence" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAAACAAAAAACAAAACAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\EntityClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenNETCF.MTConnect.XmlClient" Collapsed="true">
+    <Position X="3.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAACAAAACAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Clients\XmlClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenNETCF.MTConnect.Client">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <Members>
+      <Method Name="Client" Hidden="true" />
+      <Method Name="GetCurrentPath" Hidden="true" />
+      <Method Name="GetCurrentXml" Hidden="true" />
+      <Method Name="GetNextSampleXml" Hidden="true" />
+      <Method Name="GetNextSequenceID" Hidden="true" />
+      <Method Name="GetPathFilteredCurrentXml" Hidden="true" />
+      <Method Name="GetProbePath" Hidden="true" />
+      <Method Name="GetProbeXml" Hidden="true" />
+      <Method Name="GetSamplePath" Hidden="true" />
+      <Method Name="Initialize" Hidden="true" />
+      <Property Name="RequestTimeout" Hidden="true" />
+      <Property Name="RestConnector" Hidden="true" />
+      <Property Name="RootFolder" Hidden="true" />
+      <Property Name="SyncRoot" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAEAQEAMAAgEKAgAAAAAAAgAAAAAABAAAA=</HashCode>
+      <FileName>Clients\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

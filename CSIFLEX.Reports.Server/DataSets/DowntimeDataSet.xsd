@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DowntimeDataSet" targetNamespace="http://tempuri.org/DowntimeDataSet.xsd" xmlns:mstns="http://tempuri.org/DowntimeDataSet.xsd" xmlns="http://tempuri.org/DowntimeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DowntimeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DowntimeDataSet" msprop:Generator_UserDSName="DowntimeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Machines" msprop:Generator_TableClassName="MachinesDataTable" msprop:Generator_TableVarName="tableMachines" msprop:Generator_TablePropName="Machines" msprop:Generator_RowDeletingName="MachinesRowDeleting" msprop:Generator_RowChangingName="MachinesRowChanging" msprop:Generator_RowEvHandlerName="MachinesRowChangeEventHandler" msprop:Generator_RowDeletedName="MachinesRowDeleted" msprop:Generator_UserTableName="Machines" msprop:Generator_RowChangedName="MachinesRowChanged" msprop:Generator_RowEvArgName="MachinesRowChangeEvent" msprop:Generator_RowClassName="MachinesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MachineName" msprop:Generator_ColumnVarNameInTable="columnMachineName" msprop:Generator_ColumnPropNameInRow="MachineName" msprop:Generator_ColumnPropNameInTable="MachineNameColumn" msprop:Generator_UserColumnName="MachineName" type="xs:string" minOccurs="0" />
+              <xs:element name="MachineTable" msprop:Generator_ColumnVarNameInTable="columnMachineTable" msprop:Generator_ColumnPropNameInRow="MachineTable" msprop:Generator_ColumnPropNameInTable="MachineTableColumn" msprop:Generator_UserColumnName="MachineTable" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Downtime" msprop:Generator_TableClassName="DowntimeDataTable" msprop:Generator_TableVarName="tableDowntime" msprop:Generator_TablePropName="Downtime" msprop:Generator_RowDeletingName="DowntimeRowDeleting" msprop:Generator_RowChangingName="DowntimeRowChanging" msprop:Generator_RowEvHandlerName="DowntimeRowChangeEventHandler" msprop:Generator_RowDeletedName="DowntimeRowDeleted" msprop:Generator_UserTableName="Downtime" msprop:Generator_RowChangedName="DowntimeRowChanged" msprop:Generator_RowEvArgName="DowntimeRowChangeEvent" msprop:Generator_RowClassName="DowntimeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MachineName" msprop:Generator_ColumnVarNameInTable="columnMachineName" msprop:Generator_ColumnPropNameInRow="MachineName" msprop:Generator_ColumnPropNameInTable="MachineNameColumn" msprop:Generator_UserColumnName="MachineName" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleStatus" msprop:Generator_ColumnVarNameInTable="columnCycleStatus" msprop:Generator_ColumnPropNameInRow="CycleStatus" msprop:Generator_ColumnPropNameInTable="CycleStatusColumn" msprop:Generator_UserColumnName="CycleStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="CycleTime" msprop:Generator_ColumnVarNameInTable="columnCycleTime" msprop:Generator_ColumnPropNameInRow="CycleTime" msprop:Generator_ColumnPropNameInTable="CycleTimeColumn" msprop:Generator_UserColumnName="CycleTime" type="xs:string" minOccurs="0" />
+              <xs:element name="StatusColor" msprop:Generator_ColumnVarNameInTable="columnStatusColor" msprop:Generator_ColumnPropNameInRow="StatusColor" msprop:Generator_ColumnPropNameInTable="StatusColorColumn" msprop:Generator_UserColumnName="StatusColor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Downtime_Machines" msdata:parent="Downtime" msdata:child="Machines" msdata:parentkey="MachineName" msdata:childkey="MachineName" msprop:Generator_UserChildTable="Machines" msprop:Generator_ChildPropName="GetMachinesRows" msprop:Generator_UserRelationName="Downtime_Machines" msprop:Generator_RelationVarName="relationDowntime_Machines" msprop:Generator_UserParentTable="Downtime" msprop:Generator_ParentPropName="DowntimeRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

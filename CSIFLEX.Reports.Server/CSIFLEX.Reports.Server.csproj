@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48F7ABCD-50A4-4E6E-BA9B-489FD8C37661}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CSIFLEX.Reports.Server</RootNamespace>
+    <AssemblyName>CSIFLEX.Reports.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseReport.cs" />
+    <Compile Include="DataSets\Availability.cs">
+      <DependentUpon>Availability.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Availability.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Availability.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Downtime.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Downtime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DowntimeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DowntimeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Machines.cs">
+      <DependentUpon>Machines.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\Machines.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Machines.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\AvailabilityDataSource.cs" />
+    <Compile Include="DataSource\AvailabilityOldDataSource.cs" />
+    <Compile Include="DataSource\DowntimeDataSource.cs" />
+    <Compile Include="Data\MachineCycleTime.cs" />
+    <Compile Include="Data\MachinesTableRow.cs" />
+    <Compile Include="Data\ReportParameters.cs" />
+    <Compile Include="DowntimeReport.cs" />
+    <Compile Include="FormReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportViewer.Designer.cs">
+      <DependentUpon>FormReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateReports.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Reports_templates\AvailabilityPeriodDetails.rdlc" />
+    <EmbeddedResource Include="Reports_templates\AvailabilityPeriodMain.rdlc" />
+    <EmbeddedResource Include="Reports_templates\DowntimeReport.rdlc" />
+    <EmbeddedResource Include="FormReportViewer.resx">
+      <DependentUpon>FormReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports_templates\DowntimeSummaryReport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\EventMainDaily.rdlc" />
+    <EmbeddedResource Include="Reports_templates\EventMainReport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\EventSubdailyreport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\EventSubReport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\mainDaily.rdlc" />
+    <EmbeddedResource Include="Reports_templates\mainMonthly.rdlc" />
+    <EmbeddedResource Include="Reports_templates\mainReport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\mainWeekly.rdlc" />
+    <EmbeddedResource Include="Reports_templates\newsubdailyreport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\subdailyreport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\SubMonthly.rdlc" />
+    <EmbeddedResource Include="Reports_templates\SubReport.rdlc" />
+    <EmbeddedResource Include="Reports_templates\SubWeekly.rdlc" />
+    <None Include="DataSets\Availability.xsc">
+      <DependentUpon>Availability.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Availability.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Availability.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Availability.xss">
+      <DependentUpon>Availability.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Downtime.xsc">
+      <DependentUpon>Downtime.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Downtime.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Downtime.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Downtime.xss">
+      <DependentUpon>Downtime.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DowntimeDataSet.xsc">
+      <DependentUpon>DowntimeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DowntimeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DowntimeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DowntimeDataSet.xss">
+      <DependentUpon>DowntimeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Machines.xsc">
+      <DependentUpon>Machines.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\Machines.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Machines.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\Machines.xss">
+      <DependentUpon>Machines.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\mysql\SqlServerTypes\readme.htm" />
+    <Content Include="..\mysql\nativeBinaries\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\mysql\nativeBinaries\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\mysql\nativeBinaries\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\mysql\nativeBinaries\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSIFLEX.Utilities\CSIFLEX.Utilities\CSIFLEX.Utilities.csproj">
+      <Project>{f7d8c05b-bff8-4f17-b4ed-3ca34de0736c}</Project>
+      <Name>CSIFLEX.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSIFLEX.Database.Access\CSIFLEX.Database.Access.csproj">
+      <Project>{DEE00893-FFAA-4DAB-BA9B-43E4AEBFCA75}</Project>
+      <Name>CSIFLEX.Database.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSIFLEX.Server.Library\CSIFLEX.Server.Library.csproj">
+      <Project>{0097AC0F-8BD4-4261-8359-A48E7633B736}</Project>
+      <Name>CSIFLEX.Server.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

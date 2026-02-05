@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10AA9488-B22E-4637-80B0-4A8BD36CEEBE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CSI_Reporting_Application.My.MyApplication</StartupObject>
+    <RootNamespace>CSI_Reporting_Application</RootNamespace>
+    <AssemblyName>CSI Reporting Application</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\Ramses\Desktop\published version\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ProductName>CSI Reporting Application</ProductName>
+    <PublisherName>CSI FLEX</PublisherName>
+    <SuiteName>CSI Reporting Application</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationVersion>1.7.9.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CSI Reporting Application.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CSI Reporting Application.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9E723684DA3C5C301EE8402E73CB7B804A7F8E3F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>eNET Reporting Application_CléTemporaire.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Three-bars.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>CSI Reporting Application.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>CSI Reporting Application.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Reporting.WinForms" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Changes.Designer.vb">
+      <DependentUpon>Changes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Changes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmbeddedAssembly.vb" />
+    <Compile Include="Environnement\Addsource.Designer.vb">
+      <DependentUpon>Addsource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Addsource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Edit.Designer.vb">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Edit_mtconnect.Designer.vb">
+      <DependentUpon>Edit_mtconnect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Edit_mtconnect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Event_report.Designer.vb">
+      <DependentUpon>Event_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Event_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Not_available.Designer.vb">
+      <DependentUpon>Not_available.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Not_available.vb" />
+    <Compile Include="Form Shift\form_raw_values.Designer.vb">
+      <DependentUpon>form_raw_values.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Shift\form_raw_values.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Select_years.Designer.vb">
+      <DependentUpon>Select_years.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Select_years.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\ActivatedMaxTime.Designer.vb">
+      <DependentUpon>ActivatedMaxTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\ActivatedMaxTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other\SnapShot.Designer.vb">
+      <DependentUpon>SnapShot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other\SnapShot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Machine_util_det.Designer.vb">
+      <DependentUpon>Machine_util_det.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Machine_util_det.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Reporting_application.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Reporting_application.Designer.vb">
+      <DependentUpon>Reporting_application.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\groupename.Designer.vb">
+      <DependentUpon>groupename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\groupename.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\MTC_IP.Designer.vb">
+      <DependentUpon>MTC_IP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\MTC_IP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\StartupConfig.Designer.vb">
+      <DependentUpon>StartupConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\StartupConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Reporting_availability.Designer.vb">
+      <DependentUpon>Reporting_availability.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Reporting_availability.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Shift\Form_Shift.Designer.vb">
+      <DependentUpon>Form_Shift.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Shift\Form_Shift.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Reporting_partsNumber.Designer.vb">
+      <DependentUpon>Reporting_partsNumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Reporting_partsNumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\SynchroDB.Designer.vb">
+      <DependentUpon>SynchroDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\SynchroDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Welcome.Designer.vb">
+      <DependentUpon>Welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Processing.Designer.vb">
+      <DependentUpon>Processing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Processing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protection\Contact_info.designer.vb">
+      <DependentUpon>Contact_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Protection\Contact_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Protection\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Protection\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DashWeb.Designer.vb">
+      <DependentUpon>DashWeb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DashWeb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DashGrid.Designer.vb">
+      <DependentUpon>DashGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DashGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\SetupForm.Designer.vb">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\SetupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environnement\Config_report.Designer.vb">
+      <DependentUpon>Config_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Environnement\Config_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_BarChart_SQLITE_UC.Designer.vb">
+      <DependentUpon>Report_BarChart_SQLITE_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_BarChart_SQLITE_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_PartNumber.designer.vb">
+      <DependentUpon>Report_PartNumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_PartNumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_parts.Designer.vb">
+      <DependentUpon>Report_parts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_parts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_PieChart.Designer.vb">
+      <DependentUpon>Report_PieChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_PieChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_BarChart.Designer.vb">
+      <DependentUpon>Report_BarChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_BarChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Login\UserLogin.Designer.vb">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\report_Templates\ReportingDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportingDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report_Templates\ReportingDataset.vb">
+      <DependentUpon>ReportingDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report_Templates\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report_Templates\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RMConfig.Designer.vb">
+      <DependentUpon>RMConfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RMConfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changes.resx">
+      <DependentUpon>Changes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Addsource.resx">
+      <DependentUpon>Addsource.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Edit.resx">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Edit_mtconnect.resx">
+      <DependentUpon>Edit_mtconnect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Event_report.resx">
+      <DependentUpon>Event_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Not_available.resx">
+      <DependentUpon>Not_available.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Shift\form_raw_values.resx">
+      <DependentUpon>form_raw_values.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Select_years.resx">
+      <DependentUpon>Select_years.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\ActivatedMaxTime.resx">
+      <DependentUpon>ActivatedMaxTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other\SnapShot.resx">
+      <DependentUpon>SnapShot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Machine_util_det.resx">
+      <DependentUpon>Machine_util_det.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Reporting_application.resx">
+      <DependentUpon>Reporting_application.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\groupename.resx">
+      <DependentUpon>groupename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\MTC_IP.resx">
+      <DependentUpon>MTC_IP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\StartupConfig.resx">
+      <DependentUpon>StartupConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Reporting_availability.resx">
+      <DependentUpon>Reporting_availability.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Shift\Form_Shift.resx">
+      <DependentUpon>Form_Shift.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Reporting_partsNumber.resx">
+      <DependentUpon>Reporting_partsNumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\SynchroDB.resx">
+      <DependentUpon>SynchroDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Welcome.resx">
+      <DependentUpon>Welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processing.resx">
+      <DependentUpon>Processing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protection\Contact_info.resx">
+      <DependentUpon>Contact_info.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Protection\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DashWeb.resx">
+      <DependentUpon>DashWeb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DashGrid.resx">
+      <DependentUpon>DashGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\SetupForm.resx">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environnement\Config_report.resx">
+      <DependentUpon>Config_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_BarChart_SQLITE_UC.resx">
+      <DependentUpon>Report_BarChart_SQLITE_UC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_PartNumber.resx">
+      <DependentUpon>Report_PartNumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_parts.resx">
+      <DependentUpon>Report_parts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_PieChart.resx">
+      <DependentUpon>Report_PieChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report_BarChart.resx">
+      <DependentUpon>Report_BarChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\UserLogin.resx">
+      <DependentUpon>UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMConfig.resx">
+      <DependentUpon>RMConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\eNET Reporting Application\eNET Reporting Application\Class Diagrams\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="packages.config" />
+    <None Include="Reports\report_Templates\ReportingDataset.xsc">
+      <DependentUpon>ReportingDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\report_Templates\ReportingDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportingDataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\report_Templates\ReportingDataset.xss">
+      <DependentUpon>ReportingDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\back992.jpg" />
+    <None Include="Resources\330fxx2.jpg" />
+    <None Include="Resources\330fxx2-v2.jpg" />
+    <None Include="Resources\50px-Warning_icon.svg.png" />
+    <None Include="Resources\aero.png" />
+    <None Include="Resources\0.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\01744_dolph_1920x1080.jpg" />
+    <None Include="Resources\appbar.book.perspective.help.png" />
+    <None Include="Resources\appbar.browser.wire.png" />
+    <None Include="Resources\appbar.calendar.png" />
+    <None Include="Resources\appbar.close.png" />
+    <None Include="Resources\appbar.cog.png" />
+    <None Include="Resources\appbar.cogs.png" />
+    <None Include="Resources\appbar.database.png" />
+    <None Include="Resources\appbar.graph.line.up.png" />
+    <None Include="Resources\appbar.office.excel.png" />
+    <None Include="Resources\339927.gif" />
+    <None Include="Resources\alert_animated.gif" />
+    <None Include="Resources\avm_schloss.gif" />
+    <Content Include="Microsoft.VisualBasic.PowerPacks.dll" />
+    <None Include="Resources\Arrow_green.png" />
+    <None Include="Resources\Arrow_red.png" />
+    <None Include="Resources\arrow_left-512.png" />
+    <Content Include="Resources\Background.jpg" />
+    <None Include="Resources\barre.jpg" />
+    <None Include="Resources\barre2.jpg" />
+    <None Include="Resources\Blue-background-blurred.jpg" />
+    <None Include="Resources\C1-3D.png" />
+    <None Include="Resources\BG.png" />
+    <None Include="Resources\carousel_blue_1.jpg" />
+    <None Include="Resources\computer_support_icon.png" />
+    <None Include="Resources\blue-and-white-wallpaper-8910-9250-hd-wallpapers.jpg" />
+    <None Include="Resources\CamSolLogo.png" />
+    <None Include="Resources\bg1920x1080.jpg" />
+    <None Include="Resources\big-data1.jpg" />
+    <None Include="Resources\cable-electrique.jpg" />
+    <None Include="Resources\cloud-ready.png" />
+    <None Include="Resources\cogs.png" />
+    <None Include="Resources\CSIFLEX.png" />
+    <None Include="Resources\CSIFLEXLOGO.png" />
+    <None Include="Resources\CSIFLEXLOGOTR.png" />
+    <None Include="Resources\CSIFLEXLOGOTR2.png" />
+    <None Include="Resources\CSIFLEX_logo.png" />
+    <None Include="Resources\bgi.jpg" />
+    <None Include="Resources\CSIFRM.zip" />
+    <None Include="Resources\exclamation-mark.png" />
+    <None Include="Resources\exclamation_icon.jpg" />
+    <None Include="Resources\d.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\data-integration-import.png" />
+    <None Include="Resources\custom-reports.png" />
+    <None Include="Resources\flow.png" />
+    <None Include="Resources\d1.png" />
+    <None Include="Resources\d2.png" />
+    <None Include="Resources\drawn-arrow.png" />
+    <None Include="Resources\drawn_arrow.png" />
+    <Content Include="Resources\fond-gris-degrade.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\rect.jpg" />
+    <EmbeddedResource Include="Reports\report_Templates\mainDaily.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\mainPartNo.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\mainReport.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\parts_no2.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\subdailyreport.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\SubReport.rdlc" />
+    <EmbeddedResource Include="Reports\report_Templates\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ReportTemplate.xlsx" />
+    <None Include="Resources\reports_templates.zip" />
+    <None Include="Resources\repview_needs.zip" />
+    <None Include="Resources\round.jpg" />
+    <None Include="Resources\return.jpg" />
+    <None Include="Resources\gif-8.gif" />
+    <None Include="Resources\GraphColor.txt" />
+    <None Include="Resources\home-web-icon-300x300.jpg" />
+    <None Include="Resources\free-vector-chart-icons_main.png" />
+    <None Include="Resources\google-img.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\greenS.png" />
+    <None Include="Resources\logo_0_0.png" />
+    <None Include="Resources\MTConnectLogo.jpg" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\processing.gif" />
+    <None Include="Resources\MC900442150[1].png" />
+    <None Include="Resources\move.png" />
+    <None Include="Resources\print-icon.png" />
+    <None Include="Resources\save_server_animation.gif" />
+    <None Include="Resources\leverage-connect.png" />
+    <None Include="Resources\mobil-ready.png" />
+    <None Include="Resources\real-time.png" />
+    <None Include="Resources\scalable.png" />
+    <None Include="Resources\server-based.png" />
+    <None Include="Resources\loading_aero.gif" />
+    <None Include="Resources\reports_templates.bmp" />
+    <None Include="Resources\NDP452-KB2901954-Web.exe" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\milanioom_button_icon_base_shuffle_set.ico" />
+    <None Include="Resources\milanioom_button_icon_base_shuffle_set.jpg" />
+    <None Include="Resources\left_arrow.png" />
+    <Content Include="Resources\NC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\needle.png" />
+    <None Include="Resources\right_arrow.png" />
+    <Content Include="Resources\set-of-light-blue-background.jpg" />
+    <None Include="Resources\Spline.jpg" />
+    <None Include="Resources\Spline2.jpg" />
+    <None Include="Resources\snapshot-manager.png" />
+    <None Include="Resources\slr-camera-xxl.png" />
+    <Content Include="Resources\texture-shading-glare-gradient-background_p.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Template_partsReport_xml.xlsx" />
+    <None Include="Resources\warn.png" />
+    <None Include="Resources\transparent.gif" />
+    <None Include="Resources\tumblr_me9j27MWqg1rf78nfo1_400.gif" />
+    <None Include="Resources\unnamed.jpg" />
+    <None Include="Resources\thumb_SMART_430A.jpg" />
+    <None Include="Resources\why-icon-7.jpg" />
+    <None Include="Resources\user-friendly.png" />
+    <None Include="Resources\world_gray.png" />
+    <None Include="Resources\Unlock.png" />
+    <Content Include="Three-bars.ico" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\Daily.xlsx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSI_Library\CSI_Library\CSI_Library.vbproj">
+      <Project>{269289d7-2757-4751-936b-08e7551b6bbd}</Project>
+      <Name>CSI_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\DLL\OpenNETCF.MTConnect.Client\OpenNETCF.MTConnect.Client.FFx.csproj">
+      <Project>{e171643a-7edd-4ad6-ab26-4ed13e6f2aef}</Project>
+      <Name>OpenNETCF.MTConnect.Client.FFx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\DLL\OpenNETCF.MTConnect.Common\OpenNETCF.MTConnect.Common.FFX.csproj">
+      <Project>{92B182EE-E5D6-4706-A668-D9065FDC9624}</Project>
+      <Name>OpenNETCF.MTConnect.Common.FFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TreeViewDemoSrc\TreeViewSerialization.csproj">
+      <Project>{692e9844-1f3d-4303-887a-682373748e58}</Project>
+      <Name>TreeViewSerialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="AxInterop.AcroPDFLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Interop.AcroPDFLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\Daily.xlsx">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Resources\fond-gris-degrade.jpg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\eNET Reporting Application\eNET Reporting Application\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.JRO">
+      <HintPath>DLL\Interop.JRO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.8.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\LumenWorks.Framework.IO.3.8.0\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.20.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\MathNet.Numerics.3.20.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=acf636d62c39f8f5, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\NetOffice.Core.1.7.4.4\lib\net45\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=7c1c3e9d16cace88, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\NetOffice.Core.1.7.4.4\lib\net45\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="OpenNETCF.Extensions">
+      <HintPath>..\..\MTConnect\DLL\references\FFx\OpenNETCF.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6">
+      <HintPath>DLL\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>DLL\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a3637beacf571e8a, processorArchitecture=MSIL">
+      <HintPath>..\..\eNET Reporting Application\eNET Reporting Application\packages\NetOffice.Core.1.7.4.4\lib\net45\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\..\MTConnect\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\..\MTConnect\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\MTConnect\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\MTConnect\packages\System.Data.SQLite.Core.1.0.94.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

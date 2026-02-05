@@ -1,0 +1,4 @@
+CREATE PROCEDURE `usp_GetAllShiftSetupData`()
+BEGIN
+select * from tbl_shift_data;
+END

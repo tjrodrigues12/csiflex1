@@ -1,0 +1,219 @@
+﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Security.Cryptography;
+
+namespace RSSFeedManager
+{
+    public partial class LoginFrm : Form
+    {
+        string configPath = Path.Combine(Directory.GetCurrentDirectory(), "config.json");
+
+        Configuration configuration;
+
+        public LoginFrm()
+        {
+            InitializeComponent();
+        }
+
+        private void LoginFrm_Load(object sender, EventArgs e)
+        {
+            if (File.Exists(configPath))
+            {
+                using(StreamReader reader = new StreamReader(configPath))
+                {
+                    var json = reader.ReadToEnd();
+                    configuration = JsonConvert.DeserializeObject<Configuration>(json);
+                    Global.Database = configuration.Database;
+
+                    txtDatabaseAddress.Text = configuration.Database;
+                    txtUser.Text = configuration.User;
+                }
+            }
+
+            if (String.IsNullOrEmpty(txtDatabaseAddress.Text))
+            {
+                txtDatabaseAddress.Focus();
+            } else if (String.IsNullOrEmpty(txtUser.Text))
+            {
+                txtUser.Focus();
+            } else
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtDatabaseAddress.Text.Trim()))
+            {
+                MessageBox.Show("You must enter the database");
+                return;
+            }
+
+            try
+            {
+                Global.Database = txtDatabaseAddress.Text;
+                MySqlConnection myConnection = new MySqlConnection(Global.ConnectionString);
+                myConnection.Open();
+
+                if (myConnection.State == ConnectionState.Open)
+                {
+                    lblStatus.Text = "Connection Okay";
+                    lblStatus.ForeColor = Color.Green;
+                    myConnection.Close();
+                }
+                else
+                {
+                    lblStatus.Text = "Connection Error";
+                    lblStatus.ForeColor = Color.Red;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = "Connection Error";
+                lblStatus.ForeColor = Color.Red;
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtDatabaseAddress.Text.Trim()))
+            {
+                MessageBox.Show("You must enter the database");
+                return;
+            }
+            if (String.IsNullOrEmpty(txtUser.Text.Trim()))
+            {
+                MessageBox.Show("You must enter the user name");
+                return;
+            }
+            if (String.IsNullOrEmpty(txtPassword.Text.Trim()))
+            {
+                MessageBox.Show("You must enter the password");
+                return;
+            }
+
+
+            if (configuration == null)
+                configuration = new Configuration();
+
+            configuration.Database = txtDatabaseAddress.Text;
+            configuration.User = txtUser.Text;
+
+            Global.Database = txtDatabaseAddress.Text;
+            MySqlConnection myConnection = new MySqlConnection(Global.ConnectionString);
+            myConnection.Open();
+
+            MySqlCommand mySqlCommand = new MySqlCommand();
+            mySqlCommand.Connection = myConnection;
+            mySqlCommand.CommandText = $"SELECT * FROM csi_auth.Users WHERE username_ = '{txtUser.Text}'";
+            MySqlDataReader dataReader = mySqlCommand.ExecuteReader();
+
+            string user = "";
+            string pswd = "";
+            string salt = "";
+            while (dataReader.Read())
+            {
+                user = dataReader["username_"].ToString();
+                pswd = dataReader["password_"].ToString();
+                salt = dataReader["salt_"].ToString();
+            }
+            dataReader.Close();
+            myConnection.Close();
+
+            if (user == "")
+            {
+                MessageBox.Show("This user does not exist.", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var hash_64 = Convert.ToBase64String(ComputePBKDF2Hash(txtPassword.Text, Convert.FromBase64String(salt)));
+
+            if (hash_64 != pswd)
+            {
+                MessageBox.Show("Invalid password. Please try again!");
+                return;
+            }
+
+            string json = JsonConvert.SerializeObject(configuration);
+            File.WriteAllText(configPath, json);
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        public string AES_Decrypt(string input, string pass)
+        {
+            System.Security.Cryptography.RijndaelManaged AES = new System.Security.Cryptography.RijndaelManaged();
+            System.Security.Cryptography.MD5CryptoServiceProvider Hash_AES = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            string decrypted = "";
+            try
+            {
+                byte[] hash = new byte[32];
+                byte[] temp = Hash_AES.ComputeHash(System.Text.ASCIIEncoding.ASCII.GetBytes(pass));
+                Array.Copy(temp, 0, hash, 0, 16);
+                Array.Copy(temp, 0, hash, 15, 16);
+                AES.Key = hash;
+                AES.Mode = System.Security.Cryptography.CipherMode.ECB;
+                AES.Padding = System.Security.Cryptography.PaddingMode.Zeros;
+                System.Security.Cryptography.ICryptoTransform DESDecrypter = AES.CreateDecryptor();
+                byte[] Buffer = Convert.FromBase64String(input);
+                decrypted = System.Text.ASCIIEncoding.ASCII.GetString(DESDecrypter.TransformFinalBlock(Buffer, 0, Buffer.Length));
+                return decrypted;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public string AES_Encrypt(string input, string pass)
+        {
+            System.Security.Cryptography.RijndaelManaged AES = new System.Security.Cryptography.RijndaelManaged();
+            System.Security.Cryptography.MD5CryptoServiceProvider Hash_AES = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            string encrypted = "";
+            try
+            {
+                byte[] hash = new byte[32];
+                byte[] temp = Hash_AES.ComputeHash(System.Text.ASCIIEncoding.ASCII.GetBytes(pass));
+                Array.Copy(temp, 0, hash, 0, 16);
+                Array.Copy(temp, 0, hash, 15, 16);
+                AES.Key = hash;
+                AES.Mode = System.Security.Cryptography.CipherMode.ECB;
+                AES.Padding = System.Security.Cryptography.PaddingMode.Zeros;
+                System.Security.Cryptography.ICryptoTransform DESEncrypter = AES.CreateEncryptor();
+                byte[] Buffer = System.Text.ASCIIEncoding.ASCII.GetBytes(input);
+                encrypted = Convert.ToBase64String(DESEncrypter.TransformFinalBlock(Buffer, 0, Buffer.Length));
+                return encrypted;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        private const int SALT_SIZE = 32; // size in bytes
+        private const int HASH_SIZE = 32; // size in bytes
+        private const int ITERATIONS = 10000; // number of pbkdf2 iterations
+
+        private static byte[] ComputePBKDF2Hash(string input, byte[] salt, int iterations = ITERATIONS, int hashSize = HASH_SIZE)
+        {
+            // Generate the hash
+            Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(input, salt, iterations);
+            return pbkdf2.GetBytes(hashSize);
+        }
+
+    }
+}

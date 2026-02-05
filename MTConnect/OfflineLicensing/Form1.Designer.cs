@@ -1,0 +1,75 @@
+﻿namespace OfflineLicensing
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.RTB_Infos = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // RTB_Infos
+            // 
+            this.RTB_Infos.Location = new System.Drawing.Point(12, 56);
+            this.RTB_Infos.Name = "RTB_Infos";
+            this.RTB_Infos.ReadOnly = true;
+            this.RTB_Infos.Size = new System.Drawing.Size(355, 62);
+            this.RTB_Infos.TabIndex = 0;
+            this.RTB_Infos.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(355, 40);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Please send this information to license@cam-solutions.ca if you need an offline l" +
+    "icense.";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(379, 131);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RTB_Infos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Form1";
+            this.Text = "CSI Licensing";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.RichTextBox RTB_Infos;
+        private System.Windows.Forms.Label label1;
+    }
+}
+

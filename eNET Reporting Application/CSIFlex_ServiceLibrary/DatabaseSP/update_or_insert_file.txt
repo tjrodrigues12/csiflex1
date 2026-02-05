@@ -1,0 +1,11 @@
+CREATE  PROCEDURE `update_or_insert_file`(IN in_file_name varchar(500), IN in_file_hash varbinary(1000))
+BEGIN
+
+IF EXISTS (select * from csi_enetdata.tbl_file_status where file_name = in_file_name) THEN
+    SET SQL_SAFE_UPDATES=0;
+    update csi_enetdata.tbl_file_status set file_hash= in_file_hash, log_date=NOW() where file_name = in_file_name;
+  ELSE 
+    INSERT INTO csi_enetdata.tbl_file_status (file_hash, file_name, log_date) VALUES(in_file_hash, in_file_name, NOW());
+  END IF;
+  
+END

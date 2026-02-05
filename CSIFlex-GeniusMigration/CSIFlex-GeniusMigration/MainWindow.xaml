@@ -1,0 +1,385 @@
+﻿<Window x:Class="CSIFlex_GeniusMigration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:vm="clr-namespace:CSIFlex_GeniusMigration.ViewModel"
+		xmlns:view="clr-namespace:CSIFlex_GeniusMigration.View"
+		xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"	
+		xmlns:entities="clr-namespace:CSIFlex_GeniusMigration.Entities"
+        xmlns:local="clr-namespace:CSIFlex_GeniusMigration"
+		xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+		mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="MainWindow" Height="600" Width="800">
+	<Window.Resources>
+		<ResourceDictionary>
+			<view:DebugConverter x:Key="Debug"/>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="0.25*"/>
+		</Grid.RowDefinitions>
+		<DockPanel Grid.Row="0">
+			<Menu IsMainMenu="True"
+			      DockPanel.Dock="Top">
+				<MenuItem Header="File" >
+					<MenuItem Header="Configure" 
+							  x:Name="Configure"
+					          HorizontalContentAlignment="Left"
+							  Command="{Binding Path=NavigateToSettings}">
+						<MenuItem.Icon>
+							<materialDesign:PackIcon Kind="GearOutline" />
+						</MenuItem.Icon>
+					</MenuItem>
+					<MenuItem Header="Exit" 
+					          HorizontalContentAlignment="Left"
+							  Command="{Binding Path=Exit}">
+						<MenuItem.Icon>
+							<materialDesign:PackIcon Kind="ExitToApp" />
+						</MenuItem.Icon>
+					</MenuItem>
+				</MenuItem>
+				<MenuItem Header="Data">
+					<MenuItem Header="Start"
+							  Command="{Binding Path=StartConnections}"/>
+				</MenuItem>
+			</Menu>
+		</DockPanel>
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.4*"/>
+				<ColumnDefinition Width="0.25*"/>
+				<ColumnDefinition Width="0.35*"/>
+			</Grid.ColumnDefinitions>
+
+			<Border Margin="8" 
+					Grid.Column="0"
+					BorderThickness="1"
+					BorderBrush="#4C000000"
+					CornerRadius="4">
+				<Grid Margin="4">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.1*"/>
+						<RowDefinition Height="0.75*"/>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.05*"/>
+					</Grid.RowDefinitions>
+					<TextBlock Text="Genius Users"
+							   Foreground="#FF6C6C6C"
+							   FontWeight="DemiBold"
+							   Grid.Row="0"/>
+					<Grid Grid.Row="1"
+						  Margin="8">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Magnify"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox x:Name="NameTextBox"
+								 Grid.Column="1"
+								 VerticalAlignment="Center"
+								 materialDesign:HintAssist.Hint="Search by first or last name">
+							<TextBox.Text>
+								<Binding Path="SearchText" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+					<view:CustomDataGrid ItemsSource="{Binding Path=Collection}"
+										 CanUserSortColumns="False" 
+										 Grid.Row="2"
+										 CanUserAddRows="False"
+										 AutoGenerateColumns="False"
+										 SelectedItemsList="{Binding Path=SelectedItemsList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+										 SelectedItem="{Binding Path=SelectedItem}"
+										 materialDesign:DataGridAssist.CellPadding="13 8 8 8" 
+										 materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+						<view:CustomDataGrid.Columns>
+							<materialDesign:MaterialDataGridTextColumn Binding="{Binding  GeniusUser.FullName}"
+																		   Header="Genius User"
+																		   IsReadOnly="True"
+																		   EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
+
+							</materialDesign:MaterialDataGridTextColumn>
+
+							<materialDesign:MaterialDataGridComboBoxColumn SelectedValueBinding="{Binding UserRole}"
+																			   ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.UserRoles}">
+								<materialDesign:MaterialDataGridComboBoxColumn.Header>
+									<StackPanel>
+										<TextBlock Text="CSIFlex User Role"/>
+										<ComboBox ItemsSource="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.UserRoles}"
+													  SelectedItem="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.SelectedMasterUserRole}" />
+									</StackPanel>
+								</materialDesign:MaterialDataGridComboBoxColumn.Header>
+							</materialDesign:MaterialDataGridComboBoxColumn>
+						</view:CustomDataGrid.Columns>
+					</view:CustomDataGrid>
+
+					<StackPanel Orientation="Horizontal" Grid.Row="3">
+						<CheckBox IsChecked="{Binding Path=IgnoreTerminatedUsers}"/>
+						<TextBlock Text="Do not export terminated users to CSIFlex"
+								   VerticalAlignment="Center"
+								   Margin="4"/>
+					</StackPanel>
+
+					<Grid Grid.RowSpan="5"
+						  Background="#99FFFFFF"
+						  Visibility="{Binding Path=GeniusIsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.25*"/>
+							<ColumnDefinition Width="0.5*"/>
+							<ColumnDefinition Width="0.25*"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.45*"/>
+							<RowDefinition Height="0.55*"/>
+						</Grid.RowDefinitions>
+
+						<ProgressBar Value="45"
+									 IsIndeterminate="True" 
+									 VerticalAlignment="Bottom"
+									 Grid.Column="1"/>
+
+						<TextBlock Grid.Row="1"
+								   Grid.Column="1"
+								   Background="Transparent"
+								   Margin="8"
+								   Text="Fetching Genius Users"
+								   TextAlignment="Center"/>
+					</Grid>
+				</Grid>
+			</Border>
+
+			<Border Margin="8"
+					BorderThickness="1"
+					Grid.Column="1"
+					BorderBrush="#4C000000"
+					CornerRadius="4">
+				<Grid Margin="4">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.1*"/>
+						<RowDefinition Height="0.65*"/>
+						<RowDefinition Height="0.25*"/>
+					</Grid.RowDefinitions>
+					<TextBlock Text="Machines"
+							   Foreground="#FF6C6C6C"
+							   FontWeight="DemiBold"
+							   Grid.Row="0"/>
+					<ScrollViewer Grid.Row="1">
+						<TreeView MinWidth="220"
+								  Margin="8"  
+								  ItemsSource="{Binding Path=Machines}">
+							<i:Interaction.Behaviors>
+								<view:BindableSelectedItemBehavior SelectedItem="{Binding Path=SelectedMachine, Mode=TwoWay}"/>
+							</i:Interaction.Behaviors>
+							<TreeView.ItemTemplate>
+								<HierarchicalDataTemplate DataType="{x:Type vm:CheckableMachineParent}"
+														  ItemsSource="{Binding Path=ChildMachines}">
+									<CheckBox Content="{Binding Path=GroupName}"
+											  IsChecked="{Binding Path=IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+										<i:Interaction.Triggers>
+											<i:EventTrigger EventName="Click">
+												<i:InvokeCommandAction Command="{Binding Path=CheckedCommand}"
+																	   CommandParameter="{Binding .}"/>
+											</i:EventTrigger>
+										</i:Interaction.Triggers>
+									</CheckBox>
+									<HierarchicalDataTemplate.ItemTemplate>
+										<DataTemplate DataType="{x:Type vm:CheckableMachine}">
+											<CheckBox IsChecked="{Binding Path=IsSelected, Converter={StaticResource Debug}}" 
+													  Content="{Binding Path=MachineName}" >
+												<i:Interaction.Triggers>
+													<i:EventTrigger EventName="Click">
+														<i:InvokeCommandAction Command="{Binding Path=CheckedCommand}"
+																			   CommandParameter="{Binding .}"/>
+													</i:EventTrigger>
+												</i:Interaction.Triggers>
+											</CheckBox>
+										</DataTemplate>
+									</HierarchicalDataTemplate.ItemTemplate>
+								</HierarchicalDataTemplate>
+							</TreeView.ItemTemplate>
+						</TreeView>
+					</ScrollViewer>
+					<Grid Grid.RowSpan="3"
+						  Background="#99FFFFFF"
+						  Visibility="{Binding Path=CSIFlexIsBusy,Converter={StaticResource BooleanToVisibilityConverter}}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.25*"/>
+							<ColumnDefinition Width="0.5*"/>
+							<ColumnDefinition Width="0.25*"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.45*"/>
+							<RowDefinition Height="0.55*"/>
+						</Grid.RowDefinitions>
+
+						<ProgressBar Value="45"
+									 IsIndeterminate="True" 
+									 VerticalAlignment="Bottom"
+									 Grid.Column="1"/>
+
+						<TextBlock Grid.Row="1"
+								   Background="Transparent"
+								   Grid.Column="1"
+								   HorizontalAlignment="Center"
+								   Margin="8"
+								   TextAlignment="Center"
+								   TextWrapping="WrapWithOverflow"
+								   Text="Fetching Machines"/>
+
+
+					</Grid>
+				</Grid>
+			</Border>
+
+			<Border Margin="8"
+					BorderThickness="1"
+					Grid.Column="2"
+					BorderBrush="#4C000000"
+					CornerRadius="4">
+				<Grid Margin="4">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.65*"/>
+						<RowDefinition Height="0.05*"/>
+						<RowDefinition Height="0.15*"/>
+					</Grid.RowDefinitions>
+					<TextBlock Text="CSIFlex Users"
+							   Foreground="#FF6C6C6C"
+							   FontWeight="DemiBold"
+							   Grid.Row="0"/>
+					<ListView ItemsSource="{Binding Path=CSIFlexUsers}"
+							  Grid.Row="1">
+						<ListView.ItemTemplate>
+							<DataTemplate >
+								<TextBlock Text="{Binding Path=UserName}"/>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+					<StackPanel Orientation="Horizontal"
+								Visibility="Hidden"
+								Grid.Row="2">
+						<CheckBox IsChecked="{Binding Path=RemoveTerminatedUsers}"
+								  x:Name="DeleteTerminatedUsers"/>
+						<TextBlock Text="Delete terminated users"
+								   Margin="4"
+								   VerticalAlignment="Center"/>
+					</StackPanel>
+					<Button Command="{Binding Path=ApplyChanges}"
+							Grid.Row="3"
+							IsEnabled="{Binding IsChecked, ElementName=DeleteTerminatedUsers}"
+							Width="120"
+							Margin="0,8">
+						<TextBlock Text="Apply"/>
+					</Button>
+					<Grid Grid.RowSpan="4"
+						  Background="#99FFFFFF"
+						  Visibility="{Binding Path=CSIFlexUsersIsBusy,Converter={StaticResource BooleanToVisibilityConverter}}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.25*"/>
+							<ColumnDefinition Width="0.5*"/>
+							<ColumnDefinition Width="0.25*"/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="0.45*"/>
+							<RowDefinition Height="0.55*"/>
+						</Grid.RowDefinitions>
+
+						<ProgressBar Value="45"
+									 IsIndeterminate="True" 
+									 VerticalAlignment="Bottom"
+									 Grid.Column="1"/>
+
+						<TextBlock Grid.Row="1"
+								   Background="Transparent"
+								   Grid.Column="1"
+								   HorizontalAlignment="Center"
+								   Margin="8"
+								   TextWrapping="WrapWithOverflow"
+								   TextAlignment="Center"
+								   Text="Fetching CSIFlex User Data"/>
+					</Grid>
+				</Grid>
+			</Border>
+		</Grid>
+		<Grid Grid.Row="2" 
+			  IsEnabled="{Binding Path=IsInitialized}">
+			<Grid >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="50"/>
+					<ColumnDefinition Width="250"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="0.65*"/>
+					<RowDefinition Height="0.35*"/>
+				</Grid.RowDefinitions>
+				<materialDesign:PackIcon Kind="Key"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+				<PasswordBox Grid.Column="1"
+							 view:PasswordBoxAssistant.BindPassword="true"
+							 view:PasswordBoxAssistant.BoundPassword="{Binding Path=MasterPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+							 VerticalAlignment="Center"
+							 materialDesign:HintAssist.Hint="CSIFlex Db Password">
+				</PasswordBox>
+				<TextBlock Grid.Row="1"
+						   Grid.ColumnSpan="3"
+						   TextWrapping="WrapWithOverflow"
+						   Margin="4"
+						   Text="The master password is the default password that the users will use. If this field is left blank then a randomly generated password will be created(this will be shown on sync completion)" 
+						   FontSize="12"/>
+				<Button Grid.Column="2"
+						Command="{Binding Path=SyncCommand}"
+						Margin="8"
+						HorizontalAlignment="Left"
+						Width="100">
+					Sync
+				</Button>
+				<Grid Grid.RowSpan="2"
+					  Grid.ColumnSpan="3"
+						  Background="#E5FFFFFF"
+						  Visibility="{Binding Path=IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.25*"/>
+						<ColumnDefinition Width="0.5*"/>
+						<ColumnDefinition Width="0.25*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="0.45*"/>
+						<RowDefinition Height="0.55*"/>
+					</Grid.RowDefinitions>
+
+					<ProgressBar Value="45"
+									 IsIndeterminate="True" 
+									 VerticalAlignment="Bottom"
+									 Grid.Column="1"/>
+
+					<TextBlock Grid.Row="1"
+								   Grid.Column="1"
+								   Background="Transparent"
+								   Margin="8"
+								   Text="Fetching Genius Users"
+								   TextAlignment="Center"/>
+				</Grid>
+			</Grid>
+		</Grid>
+	</Grid>
+</Window>

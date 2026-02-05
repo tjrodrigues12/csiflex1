@@ -1,0 +1,20 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Dashboarding="clr-namespace:Codeplex.Dashboarding;assembly=Codeplex.Dashboarding" x:Class="Dial270" 
+             mc:Ignorable="d" Height="200" Width="200">
+    <Grid Margin="0,0,0.184,-0.102">
+        <Dashboarding:Dial360 Margin="10,10,21.653,0" VerticalAlignment="Top" Width="Auto">
+            <Dashboarding:Dial360.FaceColorRange>
+                <Dashboarding:ColorPoint HiColor="#FFF70000" LowColor="#FF9B0101"/>
+                <Dashboarding:ColorPoint HiColor="#FFECFF29" LowColor="#FFF70000"/>
+                <Dashboarding:ColorPoint HiColor="#FF6CD613" LowColor="#FFEBFF27"/>
+            </Dashboarding:Dial360.FaceColorRange>
+        </Dashboarding:Dial360>
+        
+
+
+    </Grid>
+</UserControl>

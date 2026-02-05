@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{809A5CC1-697D-4493-9B2C-4BCC7DF83105}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CSIFlexServerService.CSIFlexServerService</StartupObject>
+    <RootNamespace>CSIFlexServerService</RootNamespace>
+    <AssemblyName>CSIFlexServerService</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\eNET Reporting Application\eNET Reporting Application\bin\Debug\</OutputPath>
+    <DocumentationFile>CSIFlexServerService.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CSIFlexServerService.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Artboard_1167.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSIFLEX.Connectware.Data.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CSIFLEX.Connectware.Data.Common.1.0.0\lib\netstandard2.0\CSIFLEX.Connectware.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="CSIFLEX.License.Data, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CSIFLEX.License.Data.1.0.1\lib\netstandard2.0\CSIFLEX.License.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="CSIFLEX.License.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CSIFLEX.License.Library.1.0.0\lib\netstandard2.0\CSIFLEX.License.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpandableGridView">
+      <HintPath>..\..\dll\ExpandableGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=3.9.1.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LumenWorksCsvReader.3.9.1\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MathNet.Numerics.4.4.1\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.0\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="rpnParser, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\rpnParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.PerformanceCounter.4.5.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.vb" />
+    <Compile Include="Classes\AllStringConstants.vb" />
+    <Compile Include="Classes\WeatherManager.vb" />
+    <Compile Include="General_Setup.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="ServiceLibrary.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.vb">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectInstaller.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSIFlexServerService.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSIFlexServerService.Designer.vb">
+      <DependentUpon>CSIFlexServerService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserCredentials.Designer.vb">
+      <DependentUpon>UserCredentials.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserCredentials.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSIFlexServerService.resx">
+      <DependentUpon>CSIFlexServerService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCredentials.resx">
+      <DependentUpon>UserCredentials.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\eNET Reporting Application\eNET Reporting Application\Class Diagrams\DependencyValidation1\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CSIFLEX.eNET.Library\CSIFLEX.eNetLibrary\CSIFLEX.eNetLibrary.csproj">
+      <Project>{2B10F5A1-1231-4C4E-8AA9-FD12B090998F}</Project>
+      <Name>CSIFLEX.eNetLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CSIFLEX.Utilities\CSIFLEX.Utilities\CSIFLEX.Utilities.csproj">
+      <Project>{f7d8c05b-bff8-4f17-b4ed-3ca34de0736c}</Project>
+      <Name>CSIFLEX.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\CSIFLEX.Utilities\CSIFLEX.Utilities\CSIFLEX.Utilities.csproj">
+      <Project>{f7d8c05b-bff8-4f17-b4ed-3ca34de0736c}</Project>
+      <Name>CSIFLEX.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\eNETConex\CSIFLEX_Connectors\CSIFLEX.Lisence.Data\CSIFLEX.License.Data.csproj">
+      <Project>{D063CF0F-7D79-45B9-A211-2B1C1ADC5720}</Project>
+      <Name>CSIFLEX.License.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Database.Access\CSIFLEX.Database.Access.csproj">
+      <Project>{DEE00893-FFAA-4DAB-BA9B-43E4AEBFCA75}</Project>
+      <Name>CSIFLEX.Database.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.FocasConnector\CSIFLEX.FocasConnector.csproj">
+      <Project>{31cedbe6-f282-4909-ae24-1fcfd03b65f7}</Project>
+      <Name>CSIFLEX.FocasConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Server.Library\CSIFLEX.Server.Library.csproj">
+      <Project>{0097AC0F-8BD4-4261-8359-A48E7633B736}</Project>
+      <Name>CSIFLEX.Server.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSIFLEX.Server.Settings\CSIFLEX.Server.Settings.csproj">
+      <Project>{2A608C6F-11C6-4F3D-B0A5-58CB18AAB112}</Project>
+      <Name>CSIFLEX.Server.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CSI_Library\CSI_Library\CSI_Library.vbproj">
+      <Project>{269289d7-2757-4751-936b-08e7551b6bbd}</Project>
+      <Name>CSI_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\eNET Reporting Application\FocasLibrary\FocasLibrary.csproj">
+      <Project>{aa5e999c-e7b0-476c-a5ec-e783a06e4a4e}</Project>
+      <Name>FocasLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DLL\OpenNETCF.MTConnect.Client\OpenNETCF.MTConnect.Client.FFx.csproj">
+      <Project>{e171643a-7edd-4ad6-ab26-4ed13e6f2aef}</Project>
+      <Name>OpenNETCF.MTConnect.Client.FFx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DLL\OpenNETCF.MTConnect.Common\OpenNETCF.MTConnect.Common.FFX.csproj">
+      <Project>{92b182ee-e5d6-4706-a668-d9065fdc9624}</Project>
+      <Name>OpenNETCF.MTConnect.Common.FFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnetStatusChanger\EnetStatusChanger.vbproj">
+      <Project>{44606fa6-f017-40bb-ac71-9def73392a07}</Project>
+      <Name>EnetStatusChanger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rpn_function\Rpn_function.csproj">
+      <Project>{38741da4-6959-4db1-b0d9-5965205bd366}</Project>
+      <Name>Rpn_function</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceTools\ServiceTools.csproj">
+      <Project>{51984d91-884b-4336-b006-863c6aea7258}</Project>
+      <Name>ServiceTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Artboard_1167.ico" />
+    <Content Include="Three-bars.ico" />
+    <Content Include="three_bars_48by48.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

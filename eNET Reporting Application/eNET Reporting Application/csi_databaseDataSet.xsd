@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="csi_databaseDataSet" targetNamespace="http://tempuri.org/csi_databaseDataSet.xsd" xmlns:mstns="http://tempuri.org/csi_databaseDataSet.xsd" xmlns="http://tempuri.org/csi_databaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="csi_databaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="csi_databaseConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CSI_Reporting_Application.My.MySettings.GlobalReference.Default.csi_databaseConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_simulatorTableAdapter" GeneratorDataComponentClassName="tbl_simulatorTableAdapter" Name="tbl_simulator" UserDataComponentName="tbl_simulatorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="csi_databaseConnectionString (MySettings)" DbObjectName="csi_database.tbl_simulator" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT month_, day_, year_, time_, Date_, status, shift, cycletime, Partnumber FROM tbl_simulator</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="csi_databaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="csi_databaseDataSet" msprop:Generator_UserDSName="csi_databaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_simulator" msprop:Generator_TableClassName="tbl_simulatorDataTable" msprop:Generator_TableVarName="tabletbl_simulator" msprop:Generator_TablePropName="tbl_simulator" msprop:Generator_RowDeletingName="tbl_simulatorRowDeleting" msprop:Generator_RowChangingName="tbl_simulatorRowChanging" msprop:Generator_RowEvHandlerName="tbl_simulatorRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_simulatorRowDeleted" msprop:Generator_UserTableName="tbl_simulator" msprop:Generator_RowChangedName="tbl_simulatorRowChanged" msprop:Generator_RowEvArgName="tbl_simulatorRowChangeEvent" msprop:Generator_RowClassName="tbl_simulatorRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

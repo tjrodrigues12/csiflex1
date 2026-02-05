@@ -1,0 +1,4 @@
+CREATE PROCEDURE `usp_GetMonSetupById`(in in_id int)
+BEGIN
+select * from tbl_monsetup where id = in_id;
+END

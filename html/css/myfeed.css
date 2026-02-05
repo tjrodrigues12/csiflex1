@@ -1,0 +1,38 @@
+/*
+    Drawing of arrows before and after the marquee
+*/
+
+.myfeed {
+    font-size: 1.25em;
+    background: #0099FF;
+    padding: 1em 0;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding-left: 4.5em;
+    padding-right: 4.5em;
+}
+
+.myfeed::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.6em;
+    border-top: 1.6em solid white;
+    border-right: 1em solid #0099FF;
+    border-bottom: 1.6em solid white;
+    border-left: 0em solid #0099FF;
+    left: 0em;
+}
+
+.myfeed::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.6em;
+    border-top: 1.6em solid #0099FF;
+    border-right: 1em solid white;
+    border-bottom: 1.6em solid #0099FF;
+    border-left: 0em solid white;
+    right: 0em;
+}

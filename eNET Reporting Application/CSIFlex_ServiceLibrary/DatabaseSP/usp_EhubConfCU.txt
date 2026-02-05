@@ -1,0 +1,35 @@
+CREATE  PROCEDURE `usp_EhubConfCU`(IN in_operation varchar(50), 
+    IN in_id int,
+	IN in_monitoring_id varchar(20),
+	IN in_machine_name varchar(200),
+	IN in_mon_setup_id int
+	IN in_Con_type int(2),
+	)
+BEGIN
+if in_operation = 'create' and !EXISTS (select id from csi_enetdata.tbl_ehub_conf where monitoring_id=in_monitoring_id limit 1)then
+		INSERT INTO `csi_enetdata`.`tbl_ehub_conf`
+		(`id`,
+		`monitoring_id`,
+		`machine_name`,
+		`mon_setup_id`,
+		`Con_type`
+        `log_date`)
+		VALUES
+		(in_id,
+		in_monitoring_id,
+		in_machine_name,
+		in_mon_setup_id,
+		in_Con_type,
+		NOW());
+	else
+		SET SQL_SAFE_UPDATES=0;
+		UPDATE `csi_enetdata`.`tbl_ehub_conf`
+		SET
+		`monitoring_id` = in_monitoring_id,
+		`machine_name` = in_machine_name,
+		`mon_setup_id` = in_mon_setup_id,
+		`Con_type` = in_Con_type,
+		`log_date` = NOW()
+		 WHERE monitoring_id=in_monitoring_id  ;
+	END IF;
+END

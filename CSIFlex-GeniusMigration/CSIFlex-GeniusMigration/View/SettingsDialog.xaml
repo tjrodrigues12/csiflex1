@@ -1,0 +1,290 @@
+﻿<Window x:Class="CSIFlex_GeniusMigration.View.SettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSIFlex_GeniusMigration.View" 
+        xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Settings" Height="450" Width="800">
+	<Window.Resources>
+		<ResourceDictionary>
+			<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+				<Setter Property="Margin" Value="0 8 0 8" />
+			</Style>
+			<Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource MaterialDesignPasswordBox}">
+				<Setter Property="Margin" Value="0 8 0 8" />
+			</Style>
+			<Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">
+				<Setter Property="Margin" Value="0 8 0 8" />
+			</Style>
+			<BooleanToVisibilityConverter x:Key="BoolToVis" />
+
+		</ResourceDictionary>
+
+	</Window.Resources>
+	<StackPanel>
+		<StackPanel.Resources>
+		</StackPanel.Resources>
+		<extToolkit:BusyIndicator IsBusy="{Binding IsGeniusSettingsBusy}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock FontWeight="Bold"
+					   VerticalAlignment="Center"
+			           Text="Genius Settings" 
+					   Grid.Row="0"
+					   Grid.Column="0"
+			           Margin="8,0"/>
+				<StackPanel Orientation="Horizontal"
+			            Grid.Row="0"
+			            Grid.Column="1">
+					<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Account"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox x:Name="NameTextBox"
+					         Grid.Column="1"
+					         materialDesign:HintAssist.Hint="Genius User ID">
+							<TextBox.Text>
+								<Binding Path="GeniusUserName" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Key"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<PasswordBox x:Name="Password"
+					             Grid.Column="1"
+					             local:PasswordBoxAssistant.BindPassword="true"
+					             local:PasswordBoxAssistant.BoundPassword="{Binding Path=GeniusPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+					             materialDesign:HintAssist.Hint="Genius Password">
+						</PasswordBox>
+					</Grid>
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal"
+			            Grid.Row="1"
+			            Grid.Column="2">
+					<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Server"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox x:Name="GeniusApiUrl"
+					         Grid.Column="1"
+					         materialDesign:HintAssist.Hint="Genius base url">
+							<TextBox.Text>
+								<Binding Path="GeniusBaseUrl" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal"
+							Margin="0,12"
+							Grid.Row="2"
+							Grid.Column="1">
+					<Button Command="{Binding Path=ValidateGeniusSettings}"
+						        Margin="18,0,0,0" >
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Text="Validate"/>
+							<materialDesign:PackIcon Kind="Check"
+													 Foreground="White" 
+													 VerticalAlignment="Center"
+													 HorizontalAlignment="Center"
+													 Visibility="{Binding Path=GeniusSettingsIsValid, Converter={StaticResource BoolToVis}}"/>
+						</StackPanel>
+					</Button>
+					<Border BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+						<Border.Background>
+							<ImageBrush/>
+						</Border.Background>
+						<TextBlock x:Name="GeniusSettingsErrorBlock"
+						           TextWrapping="WrapWithOverflow"
+						           Text="{Binding Path=GeniusSettingsError }"			   
+								   Foreground="Red"
+						           Margin="16,0" FontSize="10"/>
+					</Border>
+				</StackPanel>
+			</Grid>
+		</extToolkit:BusyIndicator>
+		
+		<Rectangle Height="1"
+				   Fill="#FFE2E2E2"/>
+
+		<extToolkit:BusyIndicator IsBusy="{Binding IsCSIFlexSettingsBusy}">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock FontWeight="Bold"
+					   VerticalAlignment="Center"
+			           Text="CSIFlex Settings" 
+					   Grid.Row="0"
+					   Grid.Column="0"
+			           Margin="8,0"/>
+				<StackPanel Orientation="Horizontal"
+			            Grid.Row="0"
+			            Grid.Column="1">
+					<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Account"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox Grid.Column="1" 
+								 materialDesign:HintAssist.Hint="CSIFlex Db User ID">
+							<TextBox.Text>
+								<Binding Path="CSIFlexDbUsername" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Key"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<PasswordBox Grid.Column="1"
+					             local:PasswordBoxAssistant.BindPassword="true"
+					             local:PasswordBoxAssistant.BoundPassword="{Binding Path=CSIFlexPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+					             materialDesign:HintAssist.Hint="CSIFlex Db Password">
+						</PasswordBox>
+					</Grid>
+				</StackPanel>
+
+				<StackPanel Orientation="Horizontal"
+			            Grid.Row="1"
+			            Grid.Column="2">
+					<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Database"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox x:Name="CSIFlexDbUrl"
+					         Grid.Column="1"
+					         materialDesign:HintAssist.Hint="CSIFlex database base url">
+							<TextBox.Text>
+								<Binding Path="CSIFlexDbUrl" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+					<Grid >
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="50"/>
+							<ColumnDefinition Width="250"/>
+						</Grid.ColumnDefinitions>
+						<materialDesign:PackIcon Kind="Hashtag"
+					                         VerticalAlignment="Center"
+					                         HorizontalAlignment="Center"
+					                         Grid.Column="0"/>
+						<TextBox Grid.Column="1"
+								 materialDesign:HintAssist.Hint="CSIFlex database port number"
+								 >
+							<TextBox.Text>
+								<Binding Path="CSIFlexPort" UpdateSourceTrigger="PropertyChanged">
+								</Binding>
+							</TextBox.Text>
+						</TextBox>
+					</Grid>
+					
+				</StackPanel>
+				<StackPanel Orientation="Horizontal"
+							Grid.Row="2"
+							Grid.Column="1"
+							Margin="0,12">
+					<Button Command="{Binding Path=ValidateCSIFlexSettings}"
+						        Margin="18,0,0,0" >
+						<StackPanel Orientation="Horizontal">
+							<TextBlock Text="Validate"/>
+							<materialDesign:PackIcon Kind="Check"
+													 Foreground="White" 
+													 VerticalAlignment="Center"
+													 HorizontalAlignment="Center"
+													 Visibility="{Binding Path=CSIFlexSettingsIsValid, Converter={StaticResource BoolToVis}}"/>
+						</StackPanel>
+					</Button>
+					<Border BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+						<Border.Background>
+							<ImageBrush/>
+						</Border.Background>
+						<TextBlock Grid.Column="1"
+						           x:Name="CsiFlexErrorBlock"
+						           TextWrapping="WrapWithOverflow"
+						           Text="{Binding Path=CSIFlexError }"								   
+								   Foreground="Red"
+						           Margin="16,0" FontSize="10"/>
+					</Border>
+				</StackPanel>
+			</Grid>
+		</extToolkit:BusyIndicator>
+
+		<Rectangle Height="1"
+		           Fill="#FFE2E2E2"/>
+		<Button HorizontalAlignment="Center"
+				Margin="0,25,0,0"
+				IsEnabled="{Binding Path=CanSave}"
+				Command="{Binding Path=Save}"
+		        VerticalAlignment="Bottom">
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="Apply"/>
+				<materialDesign:PackIcon Kind="Floppy"
+										 Margin="8,0,0,0"
+										 Foreground="#75B2EE" 
+										 VerticalAlignment="Center"
+										 HorizontalAlignment="Center"/>
+			</StackPanel>
+		</Button>
+	</StackPanel>
+
+</Window>

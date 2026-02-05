@@ -1,0 +1,44 @@
+﻿Public Class General_Setup
+    Private Sub Button1_Click_4(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim cnt As MySqlConnection = New MySqlConnection(CSI_Library.CSI_Library.MySqlConnectionString)
+        Try
+            If File.Exists(CSI_Library.CSI_Library.serverRootPath & "\sys\RM_port_.csys") Then
+                File.Delete(CSI_Library.CSI_Library.serverRootPath & "\sys\RM_port_.csys")
+            End If
+
+            Using writer As StreamWriter = New StreamWriter(CSI_Library.CSI_Library.serverRootPath & "\sys\RM_port_.csys")
+                writer.Write(TB_port.Text)
+                writer.Close()
+            End Using
+
+
+            cnt.Open()
+            If cnt.State = ConnectionState.Open Then
+                Dim cmdCREATTION As New MySqlCommand("CREATE TABLE if not exists CSI_Database.tbl_RM_Port (port integer);", cnt)
+                Dim cmd_result As Integer
+                cmd_result = cmdCREATTION.ExecuteNonQuery()
+
+                Dim query As String = "UPDATE CSI_database.tbl_RM_Port  SET " +
+                                                 " port = @port_"
+
+                Dim cmd As New MySqlCommand(query, cnt)
+                cmd.Parameters.AddWithValue("@port_", CInt(TB_port.Text))
+
+                If (cmd.ExecuteNonQuery() = 0) Then
+                    cmd.CommandText = "INSERT INTO CSI_database.tbl_RM_Port " +
+                        "(port) " + "VALUES (@port_)"
+                    cmd.ExecuteNonQuery()
+                End If
+                cnt.Close()
+
+
+            End If
+            change_IP(False)
+        Catch ex As Exception
+            If cnt.State = ConnectionState.Open Then cnt.Close()
+            MsgBox("Could not save the port : " & ex.Message)
+        End Try
+
+    End Sub
+
+End Class

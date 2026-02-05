@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from themenate.com/applicator/dist/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Jul 2018 04:23:59 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Applicator - Admin Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="assets/images/logo/apple-touch-icon.html">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+
+    <!-- core dependcies css -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+
+    <!-- page css -->
+<link rel="stylesheet" href="assets/vendor/datatables/media/css/dataTables.bootstrap4.min.css" 
+	  <link href="assets/vendor/selectize/dist/css/selectize.default.css" rel="stylesheet">
+    <link href="assets/vendor/summernote/dist/summernote-bs4.css"  rel="stylesheet">
+    <link href="assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet">
+	<link href="assets/vendor/nouislider/distribute/nouislider.css" rel="stylesheet">
+    <!-- core css -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app header-default side-nav-dark">
+        <div class="layout">
+            <!-- Header START -->
+            <div class="header navbar">
+                <div class="header-container">
+                    
+                    <ul class="nav-left">
+                        <li>
+                            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+						</li>
+									<div class="nav-logo">
+                        <a href="index-2.html">
+                            <div class="logo logo-dark" style="background-image: url('assets/images/logo/logo.png')"></div>
+                            <div class="logo logo-white" style="background-image: url('assets/images/logo/logo-white.png')"></div>
+                        </a>
+                    </div>
+            </div>
+				</div>
+            <!-- Header END -->
+
+            <!-- Side Nav START -->
+           <div class="side-nav expand-lg">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu scrollable">
+                        <li class="nav-item dropdown">
+                            
+								<a href="1_overview2.html">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-gauge"></i>
+                                </span>
+								<span class="title">Overview</span>
+                                
+								</a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            
+								<a href="5_configuration_reports.html">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-chart-donut"></i>
+                                </span>
+                                <span class="title">Reporting</span>
+                                
+								</a>
+                            
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+									<i class="mdi mdi-vector-arrange-above"></i>
+								</span>
+                                <span class="title">Notifications</span>
+								
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item dropdown open">
+                            
+								<a href="5_configuration.html">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-tune-vertical"></i>
+                                </span>
+                                <span class="title">Configuration</span>
+                                
+                            </a>
+                           
+                        </li>
+						<li class="nav-item dropdown">
+                            <a href="5_configuration.html">
+                                <span class="icon-holder">
+                                    <i class="mdi mdi-power"></i>
+                                </span>
+                                <span class="title">Logout</span>
+							</a>
+                            
+                           
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Quick View START -->
+                <div class="quick-view">
+                    <ul class="quick-view-tabs nav nav-tabs nav-justified" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#config" role="tab" data-toggle="tab">
+                                <span>Config</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#quick-view-chat" role="tab" data-toggle="tab">
+                                <span>Chat</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#activity" role="tab" data-toggle="tab">
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content scrollable">
+                        <!-- config START -->
+                        <div id="config" role="tabpanel" class="tab-pane fade in active">
+                            <div class="theme-configurator p-20">
+                                <div class="m-v-20 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">Solid Header</p>
+                                    <p class="m-b-15">Config header background (solid)</p>
+                                    <div class="theme-selector p-b-20">
+                                        <label>
+                                            <input type="radio" value="default" name="header-theme">
+                                            <span class="theme-color bg-white border"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="primary" name="header-theme">
+                                            <span class="theme-color bg-primary"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="info" name="header-theme">
+                                            <span class="theme-color bg-info"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="success" name="header-theme">
+                                            <span class="theme-color bg-success"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="warning" name="header-theme">
+                                            <span class="theme-color bg-warning"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="danger" name="header-theme">
+                                            <span class="theme-color bg-danger"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="dark" name="header-theme">
+                                            <span class="theme-color bg-dark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="m-v-15 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">Gradient Header</p>
+                                    <p class="m-b-15">Config header background (gradient)</p>
+                                    <div class="theme-selector p-b-15">
+                                        <label>
+                                            <input type="radio" value="primary-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-primary"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="info-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-info"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="success-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-success"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="warning-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-warning"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="danger-gradient" name="header-theme">
+                                            <span class="theme-color bg-gradient-danger"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="m-v-15 border bottom">
+                                    <p class="text-dark text-semibold m-b-0">Side Nav Color</p>
+                                    <p class="m-b-15">Config side nav background</p>
+                                    <div class="theme-selector p-b-15">
+                                        <label>
+                                            <input type="radio" value="default" name="side-nav-color">
+                                            <span class="theme-color bg-white border"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" value="dark" name="side-nav-color">
+                                            <span class="theme-color bg-dark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="m-v-15">
+                                    <p class="text-dark text-semibold m-b-0">RTL</p>
+                                    <p class="m-b-15">Toggle right to left</p>
+                                    <div class="theme-selector p-b-15">
+                                        <div class="switch checkbox-inline">
+                                            <input type="checkbox" name="rtl-toogle" id="rtl-toogle">
+                                            <label for="rtl-toogle"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- config END -->
+                        <!-- chat START -->
+                        <div id="quick-view-chat" role="tabpanel" class="tab-pane fade">
+                            <div class="quick-view-chat chat">
+                                <div class="chat-user-list">
+                                    <div class="m-b-30 m-t-20">
+                                        <h6 class="p-h-20 text-uppercase text-semibold">Online</h6>
+                                        <ul class="list-media">
+                                            <li class="list-item unread-msg">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-1.jpg" alt="">
+                                                        <span class="status success"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title">Marshall Nichols</span>
+                                                        <span class="sub-title">Here's the story of a man...</span>
+                                                        <div class="float-item">
+                                                            <span class="chat-counter">2</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item unread-msg">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                        <span class="status success"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title">Susie Willis</span>
+                                                        <span class="sub-title">Do you see any Teletubbies...</span>
+                                                        <div class="float-item">
+                                                            <span class="chat-counter">1</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-3.jpg" alt="">
+                                                        <span class="status success"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title">Debra Stewart</span>
+                                                        <span class="sub-title">Oh my God. I didn't even...</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="m-b-30">
+                                        <h6 class="p-h-20 text-uppercase text-semibold">Away</h6>
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-4.jpg" alt="">
+                                                        <span class="status away"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Francisco Vasquez</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-5.jpg" alt="">
+                                                        <span class="status away"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Jane Hunt</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-6.jpg" alt="">
+                                                        <span class="status away"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Ava Alexander</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-7.jpg" alt="">
+                                                        <span class="status away"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Shane Ross</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="m-b-30">
+                                        <h6 class="p-h-20 text-uppercase text-semibold">Busy</h6>
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                                        <span class="status busy"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Erin Gonzales</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="assets/images/avatars/thumb-9.jpg" alt="">
+                                                        <span class="status busy"></span>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Alan Mills</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="quick-view-conversation conversation">
+                                    <div class="conversation-wrapper">
+                                        <div class="conversation-header">
+                                            <span class="recipient">Susie Willis</span>
+                                            <ul class="tools">
+                                                <li>
+                                                    <a class="text-gray" href="javascript:void(0)">
+                                                        <i class="mdi mdi-dots-vertical"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="text-gray conversation-toggler" href="javascript:void(0)">
+                                                        <i class="mdi mdi-chevron-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="quick-view-conversation-body conversation-body scrollable">
+                                            <div class="msg datetime">
+                                                <span>7:57PM</span>
+                                            </div>
+                                            <div class="msg msg-recipient">
+                                                <div class="user-img">
+                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                </div>
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Hey, what are you doing?</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-sent">
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Texting the most beautiful girl in the world.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-recipient">
+                                                <div class="user-img">
+                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                </div>
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Oh? How Cute</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-sent">
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Yup but she's not replying so texting you</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-recipient">
+                                                <div class="user-img">
+                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                </div>
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Okay</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg datetime">
+                                                <span>8:05PM</span>
+                                            </div>
+                                            <div class="msg msg-recipient">
+                                                <div class="user-img">
+                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                                </div>
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Bye</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-sent">
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>I'm just kidding..!!</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-sent">
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>Hello</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="msg msg-sent">
+                                                <div class="bubble">
+                                                    <div class="bubble-wrapper">
+                                                        <span>It's me..can you hear me..!!</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="conversation-footer">
+                                            <button class="upload-btn">
+                                                <i class="ti-face-smile"></i>
+                                            </button>
+                                            <input class="chat-input" type="text" placeholder="Type a message...">
+                                            <button class="sent-btn">
+                                                <i class="fa fa-send-o"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- chat END -->
+                        <!-- activity START -->
+                        <div id="activity" role="tabpanel" class="tab-pane fade">
+                            <div class="quick-view-activity">
+                                <ul class="list-media m-t-20">
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <img src="assets/images/avatars/thumb-1.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Marshall Nichols</span>
+                                                <span class="sub-title">has replied your mails.</span>
+                                                <span class="sub-title font-size-11 p-t-5">8 min ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Susie Willis</span>
+                                                <span class="sub-title">commented on your post's</span>
+                                                <span class="sub-title font-size-11 p-t-5">12 min ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <div class="icon-avatar bg-primary">
+                                                    <i class="ti-settings"></i>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">System Notifications</span>
+                                                <span class="sub-title">Your account updated</span>
+                                                <span class="sub-title font-size-11 p-t-5">2 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <img src="assets/images/avatars/thumb-8.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Erin Gonzales</span>
+                                                <span class="sub-title">commented on your post's</span>
+                                                <span class="sub-title font-size-11 p-t-5">3 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <div class="icon-avatar bg-info">
+                                                    <i class="mdi mdi-file-outline"></i>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">New Attachment</span>
+                                                <span class="sub-title">3 files has updated</span>
+                                                <span class="sub-title font-size-11 p-t-5">5 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <div class="icon-avatar bg-success">
+                                                    <span>S</span>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Suzanne Lynch</span>
+                                                <span class="sub-title">has sent you a message.</span>
+                                                <span class="sub-title font-size-11 p-t-5">9 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <img src="assets/images/avatars/thumb-12.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Riley Newman</span>
+                                                <span class="sub-title">commented on your post's</span>
+                                                <span class="sub-title font-size-11 p-t-5">10 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <div class="icon-avatar bg-warning">
+                                                    <span>FW</span>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Franklin Weaver</span>
+                                                <span class="sub-title">has sent you a message.</span>
+                                                <span class="sub-title font-size-11 p-t-5">10 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="list-item border bottom">
+                                        <a href="javascript:void(0);" class="media-hover p-20">
+                                            <div class="media-img">
+                                                <img src="assets/images/avatars/thumb-11.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title">Darryl Day</span>
+                                                <span class="sub-title">commented on your post's</span>
+                                                <span class="sub-title font-size-11 p-t-5">12 days ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- activity END -->
+                    </div>
+                </div>
+                <!-- Side Panel END -->
+
+                <!-- Content Wrapper START -->
+ <div class="main-content">
+                    <div class="container-fluid">
+						
+	 
+						
+						
+						
+						<div class="card">
+							
+                                    <div class="tab-primary">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a href="#tab-primary-1" class="nav-link active" role="tab" data-toggle="tab">General</a>
+                                            </li>
+											
+                                            <li class="nav-item">
+                                                <a href="#tab-primary-2" class="nav-link" role="tab" data-toggle="tab">Folders</a>
+                                            </li>
+                                            
+											<li class="nav-item">
+                                                <a href="#tab-primary-3" class="nav-link" role="tab" data-toggle="tab">Dates</a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="#tab-primary-4" class="nav-link" role="tab" data-toggle="tab">Sources</a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="#tab-primary-5" class="nav-link" role="tab" data-toggle="tab">Dashboard</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+											
+										<div role="tabpanel" class="tab-pane fade in active" id="tab-primary-1">
+                                                <div class="p-h-15 p-v-20">
+													<div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group">
+                                                        <label class="control-label">Default reporting folder</label>
+                                                        
+                                                    
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-sm-9">
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                          <div class="text-sm-left">
+                                                            <button class="btn btn-default">Browse</button>
+</div>
+                                                        </div>
+                                                    </div>        
+                                                </div>
+                                    
+											  <div class="form-group">
+											  
+                                                <div class="form-row">
+													
+                                                    <div class="col-sm-4">
+														<label class="control-label">Status Colors</label>
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <input id="basicFormCheckbox2" type="checkbox">
+                                                                <label for="basicFormCheckbox2">Use eNET Colors</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+														<label class="control-label">"Other" event color</label>
+                                                        <div class="m-t-5">
+														<div class="form-group">
+                                                       
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-primary">
+                                                           
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-success">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-info">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-warning">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-danger">
+                                                            
+                                                        </button>
+                                                    </div>
+                                                    </div>        
+                                                </div>
+												            
+                                                </div>
+												  
+														<div class="form-group">
+											  <label class="control-label">Upload Colors</label>
+                                                     
+                                                    
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-sm-9">
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control">
+
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                          <div class="text-sm-left">
+                                                            <button class="btn btn-default">Browse</button>
+
+                                                        </div></div>
+                                                    </div> </div></div>
+											</div></div></div></div> </div>      
+                                         
+                            
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+										<div class="form-row">
+										<div class="col-md-4">
+											<div class="form-group">
+												   <label class="control-label">Tree view refresh rate (secs)</label>
+                                                        
+                                                         <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                        
+
+                                                    </div>
+											</div>
+											<div class="col-md-1">
+												<div>&nbsp;</div>
+											</div>
+                                                    <div class="col-md-7">
+														<div class="form-group">
+                                                        <label class="control-label">Configuration</label>
+                                                        
+                                                     <div class="text-sm-left">
+                                                                <button class="btn btn-default">Rainmeter</button>
+                                                                <button class="btn btn-default">Startup</button>
+                                                            </div>
+												</div>
+											</div>
+										</div>
+                                                    
+                                                
+										<div class="form-group">
+											  
+                                                <div class="form-row">
+                                                    <div class="col-sm-4">
+														<label class="control-label">Target line</label>
+                                                        <div class="form-group">
+                                                             <select class="form-control">
+                                                    <option>60</option>
+                                                    <option>70</option>
+                                                    <option>80</option>
+                                                    <option>90</option>
+                                                    <option>100</option>
+													<option>120</option>
+                                                </select>
+                                                        </div>
+                                                    </div>
+													  <div class="col-md-1">
+												<div>&nbsp;</div>
+											</div>
+													<div class="col-sm-4">
+														<div class="form-group">
+														<label class="control-label">color</label>
+                                                        <div class="m-t-5">
+														<div class="form-group">
+                                                       
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-primary">
+                                                           
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-success">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-info">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-warning">
+                                                            
+                                                        </button>
+                                                        <button class="btn btn-icon btn-rounded btn-outline btn-danger">
+                                                            
+                                                        </button>
+														  </div></div></div></div>
+														
+                                                 
+													<div class="col-sm-3">
+													<div class="m-t-30">
+													<div class="text-sm-left">
+														<button class="btn btn-default">Remove</button>
+													  </div></div>
+                                                </div>
+											</div>
+												   
+                                                
+                                                <div class="form-row"> </div>
+                                      </div>
+                                                    
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+							
+                                </div>
+													</div></div>
+											
+                                            <div role="tabpanel" class="tab-pane fade" id="tab-primary-2">
+                                                <div class="p-h-15 p-v-20">
+													<div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group">
+                                                        <label class="control-label">Specify the eNET folder</label>
+                                                        
+                                                    
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-sm-9">
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                          <div class="text-sm-left">
+                                                            <button class="btn btn-default">Browse</button>
+															  <button class="btn btn-default">Default</button>
+</div>
+                                                        </div>
+                                                    </div>        
+                                                </div>
+                                    
+											  
+												  
+														<div class="form-group">
+											  <label class="control-label">Specify the database folder</label>
+                                                     
+                                                    
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-sm-9">
+                                                        <div class="form-group">
+                                                            <input type="password" class="form-control">
+
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                          <div class="text-sm-left">
+                                                            <button class="btn btn-default">Browse</button>
+															  <button class="btn btn-default">default</button>
+
+                                                        </div></div>
+                                                    </div> </div></div>
+											</div></div></div></div> </div>   </div></div>
+                                            <div role="tabpanel" class="tab-pane fade" id="tab-primary-3">
+												
+                                                                                                                
+
+	
+
+                        <div class="row">
+                             <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+										<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+															
+															
+															<label class="control-label">First day of week</label>
+                                                            <select class="form-control">
+                                                    <option>Sunday</option>
+                                                    <option>Monday</option>
+                                                    <option>Tuesday</option>
+                                                    <option>Wednesday</option>
+                                                    <option>Thursday</option>
+													<option>Friday</option>
+                                                    <option>Saturday</option>
+                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+															<label class="control-label">Last day of week</label>
+                                                          <div class="text-sm-left">
+                                                            <select class="form-control">
+                                                    <option>Sunday</option>
+                                                    <option>Monday</option>
+                                                    <option>Tuesday</option>
+                                                    <option>Wednesday</option>
+                                                    <option>Thursday</option>
+													<option>Friday</option>
+                                                    <option>Saturday</option>
+                                                </select>
+</div>
+                                                        </div>
+                                                    </div>        
+                                                </div>
+                                    
+											  
+									</div></div></div> 
+                                         
+                            
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+										<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												   <label class="control-label">First month of year</label>
+                                                        
+                                                         <select class="form-control">
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+													<option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+													<option>November</option>
+                                                    <option>December</option>
+                                                </select>
+                                        
+
+                                                    </div>
+											</div>
+											
+                                                    <div class="col-md-6">
+														<div class="form-group">
+                                                        <label class="control-label">First date for parts report</label>
+                                                    <div class="icon-input">
+                                                        <i class="mdi mdi-timer"></i>
+                                                        <input id="datepicker-1"  data-provide="datepicker" type="text" class="form-control" placeholder="Pick a date">
+                                                    </div>
+                                                </div>
+                                                    </div>
+												</div>
+											</div>
+										</div>
+							</div></div>
+                                           
+                                               
+							
+								<div class="text-sm-right">
+                                                                <button class="btn btn-default">Cancel</button>
+                                                                <button class="btn btn-success">save</button>
+                                                            </div>
+                                      </div><div role="tabpanel" class="tab-pane fade" id="tab-primary-4">
+                                                <div class="p-h-15 p-v-20">
+													<div class="row">
+                            <div class="col-md-12">
+                                 <div class="card">
+                <div class="card-header">                                      
+<div class="table-overflow">
+                                    <table id="dt-opt" class="table table-hover table-xl">
+                                    <thead>
+                                        <tr>
+                                            <th>Display</th>
+                                            <th>Machine name</th>
+                                            <th>Source</th>
+                                            <th>Check</th>
+											<th>Correction</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="selectable2" type="checkbox">
+                                                    <label for="selectable2"></label>
+                                                </div>
+                                            </td>
+                                            <td>Okuma</td>
+                                            <td>eNET</td>
+                                            <td><button class="btn btn-default">Check</button></td>
+											<td>NA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="selectable3" type="checkbox">
+                                                    <label for="selectable3"></label>
+                                                </div>
+                                            </td>
+                                            <td>Yasnac</td>
+                                            <td>eNET</td>
+                                            <td><button class="btn btn-default">Check</button></td>
+											<td>NA</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="selectable4" type="checkbox">
+                                                    <label for="selectable4"></label>
+                                                </div>
+                                            </td>
+                                            <td>Amada</td>
+											<td>eNET</td>
+                                            <td><button class="btn btn-default">Check</button></td>
+											<td>NA</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+	</div></div></div>
+								
+							<div class="text-sm-right">
+                                                                <button class="btn btn-default">Cancel</button>
+                                                                <button class="btn btn-success">save</button>
+                                                            </div>
+				    </form>
+													</div>  </div></div></div>
+							<div role="tabpanel" class="tab-pane fade" id="tab-primary-5">
+                                                <div class="p-h-15 p-v-20">
+													<div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group">
+                                                        <label class="control-label">Machines</label>
+                                                
+                                            <div class="card">
+                                            <ul class="list-media">
+												   <li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox9" type="checkbox" checked>
+                                                                <label for="basicFormCheckbox9">Yasnac</label></div>
+												</li>
+                                                <li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox10" type="checkbox" checked>
+                                                                <label for="basicFormCheckbox10">Okuma</label></div>
+												</li><li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox11" type="checkbox">
+                                                                <label for="basicFormCheckbox11">Amada</label></div>
+												</li><li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox12" type="checkbox">
+                                                                <label for="basicFormCheckbox12">Mori Seiko</label></div>
+												</li><li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox13" type="checkbox">
+                                                                <label for="basicFormCheckbox13">Daytona</label></div>
+												</li>
+												<li class="list-item"><div class="p-v-10 p-h-20"><div class="checkbox">
+                                                                <input id="basicFormCheckbox14" type="checkbox">
+                                                                <label for="basicFormCheckbox14">Indianna</label></div>
+												</li>
+                                               
+                                                
+                                            </ul>  
+                                        </div>
+                                                
+                                                    
+														
+                                                       
+			
+	 </div>
+									</div>
+								</div>
+							</div>
+                                         
+                            
+                            
+                            
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="form-group">
+                                                        <label class="control-label">common controls</label>
+                                                        
+                                                    
+                                                
+                                                <div class="form-row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            
+                                            <div class="checkbox">
+                                                <input id="checkbox1" type="checkbox" checked>
+                                                <label for="checkbox1">Date/Time</label>
+                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-8">
+                                                        <div class="form-group">
+                                                          
+                                                            <select class="form-control">
+                                                    <option>dd/mm/yy-hh:mm:dd:ss</option>
+															</select>
+                                                            </div>
+                                                    </div>        
+											</div>
+                                    
+											  
+												  
+														<div class="form-group">
+											 
+                                                <div class="form-row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                             <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked>
+                                                <label for="checkbox2">Temperature</label>
+                                            </div>
+
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+															<input type="text" class="form-control" placeholder="City/State">
+														</div></div>
+													
+															<div class="col-sm-3">
+										 <div class="form-group">
+                                                            <select class="form-control">
+                                                    <option>Celsius</option>
+																<option>Farenheit</option>
+															</select>
+                                                            </div>
+										</div></div>
+                                                    </div> 
+                                                    <div class="form-row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                             <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked>
+                                                <label for="checkbox2">Full screen</label>
+                                            </div>
+
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+															<div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked>
+                                                <label for="checkbox2">Change screen after:</label>
+                                            </div>
+														</div></div>
+													
+													  <div class="col-sm-3">
+										 
+										 <input type="text" class="form-control" placeholder="Secs.">
+								                      </div></div>
+                                                    </div> 
+										
+                                                <div class="form-row">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                             <div class="checkbox">
+                                                <input id="checkbox2" type="checkbox" checked>
+                                                <label for="checkbox2">Custom Logo</label>
+                                            </div>
+
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+															<input type="text" class="form-control">
+														</div></div>
+													
+															<div class="col-sm-3">
+										 <div class="form-group">
+                                                            <button class="btn btn-default">Browse</button>
+
+                                                            </div>
+                                                    </div> </div>
+											</div>
+								
+							</div>
+							</div></div>   </div></div>
+							
+							</div></div></div>
+				
+						
+						
+						
+						
+						
+						
+						
+						
+						
+                                                
+                                    
+                        
+                   
+                
+                <!-- Content Wrapper END -->
+
+                <!-- Footer START -->
+                <footer class="content-footer">
+                    <div class="footer">
+                        <div class="copyright">
+                            <span>Copyright © 2018 <b class="text-dark">CSIFlex</b>. All rights reserved.</span>
+                            <span class="go-right">
+                                <a href="#" class="text-gray m-r-15">Term &amp; Conditions</a>
+                                <a href="#" class="text-gray">Privacy &amp; Policy</a>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+
+            </div>
+            <!-- Page Container END -->
+
+        </div>
+    </div>
+
+    <script src="assets/js/vendor.js"></script>
+
+    <script src="assets/js/app.min.js"></script>
+
+    <!-- page js -->
+    <script src="assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="assets/vendor/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="assets/js/dashboard/default.js"></script>
+	<script src="assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="assets/vendor/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/tables/data-table.js"></script>
+	<script src="assets/vendor/moment/min/moment.min.js"></script>
+	<script src="assets/vendor/selectize/dist/js/standalone/selectize.min.js"></script>
+	<script src="assets/js/forms/form-elements.js"></script>
+	<script src="assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
+<script src="assets/vendor/nouislider/distribute/nouislider.js"></script>
+    <script src="assets/js/components/slider-progress.js"></script>
+
+</body>
+
+
+<!-- Mirrored from themenate.com/applicator/dist/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Jul 2018 04:24:00 GMT -->
+</html>

@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8DF9954-049A-4656-836E-98D14F90F9FB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CSIFlex_Client_Application.My.MyApplication</StartupObject>
+    <RootNamespace>CSIFlex_Client_Application</RootNamespace>
+    <AssemblyName>CSIFlex Client Application</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CSIFlex Client Application.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CSIFlex Client Application.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>html webpages\assets\images\logo\three_bars_48by48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSIFlexClientSetup.Designer.vb">
+      <DependentUpon>CSIFlexClientSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CSIFlexClientSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IP_choice.Designer.vb">
+      <DependentUpon>IP_choice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IP_choice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Server.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSIFlexClientSetup.resx">
+      <DependentUpon>CSIFlexClientSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IP_choice.resx">
+      <DependentUpon>IP_choice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="html webpages\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <None Include="html webpages\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <None Include="html webpages\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <None Include="html webpages\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <None Include="html webpages\assets\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="html webpages\assets\fonts\materialdesignicons-webfontd41d.eot" />
+    <None Include="html webpages\assets\fonts\materialdesignicons-webfontdf71.eot" />
+    <None Include="html webpages\assets\fonts\materialdesignicons-webfontdf71.ttf" />
+    <None Include="html webpages\assets\fonts\materialdesignicons-webfontdf71.woff" />
+    <None Include="html webpages\assets\fonts\materialdesignicons-webfontdf71.woff2" />
+    <None Include="html webpages\assets\fonts\themify9f24.eot" />
+    <None Include="html webpages\assets\fonts\themify9f24.ttf" />
+    <None Include="html webpages\assets\fonts\themify9f24.woff" />
+    <None Include="html webpages\assets\fonts\themifyd41d.eot" />
+    <None Include="html webpages\assets\vendor\summernote\dist\font\summernote4c4d.eot" />
+    <None Include="html webpages\assets\vendor\summernote\dist\font\summernote4c4d.ttf" />
+    <None Include="html webpages\assets\vendor\summernote\dist\font\summernote4c4d.woff" />
+    <None Include="html webpages\assets\vendor\summernote\dist\font\summernoted41d.eot" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CSI_Library\CSI_Library\CSI_Library.vbproj">
+      <Project>{269289d7-2757-4751-936b-08e7551b6bbd}</Project>
+      <Name>CSI_Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MTConnect\ServiceTools\ServiceTools.csproj">
+      <Project>{51984d91-884b-4336-b006-863c6aea7258}</Project>
+      <Name>ServiceTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html webpages\1_overview2.html" />
+    <Content Include="html webpages\4_configuration_dashboard.html" />
+    <Content Include="html webpages\4_configuration_dates.html" />
+    <Content Include="html webpages\4_configuration_folders.html" />
+    <Content Include="html webpages\4_configuration_general.html" />
+    <Content Include="html webpages\4_configuration_report_monit.html" />
+    <Content Include="html webpages\4_configuration_report_parts.html" />
+    <Content Include="html webpages\4_configuration_sources.html" />
+    <Content Include="html webpages\4_configuration_version.html" />
+    <Content Include="html webpages\5_configuration.html" />
+    <Content Include="html webpages\5_configuration_reports.html" />
+    <Content Include="html webpages\assets\css\animate.min.css" />
+    <Content Include="html webpages\assets\css\app.css" />
+    <Content Include="html webpages\assets\css\font-awesome.min.css" />
+    <Content Include="html webpages\assets\css\materialdesignicons.min.css" />
+    <Content Include="html webpages\assets\css\themify-icons.css" />
+    <Content Include="html webpages\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="html webpages\assets\fonts\materialdesignicons-webfontdf71.svg" />
+    <Content Include="html webpages\assets\fonts\themify9f24.svg" />
+    <Content Include="html webpages\assets\images\avatars\chi.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-1.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-10.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-11.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-12.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-13.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-14.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-15.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-16.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-18.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-19.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-2.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-20.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-21.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-22.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-23.png" />
+    <Content Include="html webpages\assets\images\avatars\thumb-24.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-25.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-26.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-27.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-3.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-4.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-5.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-6.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-7.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-8.jpg" />
+    <Content Include="html webpages\assets\images\avatars\thumb-9.jpg" />
+    <Content Include="html webpages\assets\images\avatars\uk.jpg" />
+    <Content Include="html webpages\assets\images\avatars\us.jpg" />
+    <Content Include="html webpages\assets\images\logo\apple-touch-icon.html" />
+    <Content Include="html webpages\assets\images\logo\favicon.png" />
+    <Content Include="html webpages\assets\images\logo\logo%28old%29.png" />
+    <Content Include="html webpages\assets\images\logo\logo-sm%28old%29.png" />
+    <Content Include="html webpages\assets\images\logo\logo-sm.png" />
+    <Content Include="html webpages\assets\images\logo\logo-white-sm.png" />
+    <Content Include="html webpages\assets\images\logo\logo-white.png" />
+    <Content Include="html webpages\assets\images\logo\logo.png" />
+    <Content Include="html webpages\assets\images\logo\logoold2.png" />
+    <Content Include="html webpages\assets\images\logo\Three-bars.png" />
+    <Content Include="html webpages\assets\images\logo\three_bars_48by48.ico" />
+    <Content Include="html webpages\assets\images\others\bell.png" />
+    <Content Include="html webpages\assets\images\others\font-awesome-bg.jpg" />
+    <Content Include="html webpages\assets\images\others\img-1.jpg" />
+    <Content Include="html webpages\assets\images\others\img-10.jpg" />
+    <Content Include="html webpages\assets\images\others\img-11.jpg" />
+    <Content Include="html webpages\assets\images\others\img-12.jpg" />
+    <Content Include="html webpages\assets\images\others\img-13.jpg" />
+    <Content Include="html webpages\assets\images\others\img-14.jpg" />
+    <Content Include="html webpages\assets\images\others\img-15.jpg" />
+    <Content Include="html webpages\assets\images\others\img-16.jpg" />
+    <Content Include="html webpages\assets\images\others\img-17.jpg" />
+    <Content Include="html webpages\assets\images\others\img-18.jpg" />
+    <Content Include="html webpages\assets\images\others\img-19.jpg" />
+    <Content Include="html webpages\assets\images\others\img-2.jpg" />
+    <Content Include="html webpages\assets\images\others\img-20.jpg" />
+    <Content Include="html webpages\assets\images\others\img-21.jpg" />
+    <Content Include="html webpages\assets\images\others\img-22.jpg" />
+    <Content Include="html webpages\assets\images\others\img-23.jpg" />
+    <Content Include="html webpages\assets\images\others\img-24.jpg" />
+    <Content Include="html webpages\assets\images\others\img-25.jpg" />
+    <Content Include="html webpages\assets\images\others\img-26.jpg" />
+    <Content Include="html webpages\assets\images\others\img-27.jpg" />
+    <Content Include="html webpages\assets\images\others\img-28.jpg" />
+    <Content Include="html webpages\assets\images\others\img-29.jpg" />
+    <Content Include="html webpages\assets\images\others\img-30.jpg" />
+    <Content Include="html webpages\assets\images\others\img-31.jpg" />
+    <Content Include="html webpages\assets\images\others\img-32.jpg" />
+    <Content Include="html webpages\assets\images\others\img-33.png" />
+    <Content Include="html webpages\assets\images\others\img-34.jpg" />
+    <Content Include="html webpages\assets\images\others\img-35.jpg" />
+    <Content Include="html webpages\assets\images\others\img-36.jpg" />
+    <Content Include="html webpages\assets\images\others\img-37.jpg" />
+    <Content Include="html webpages\assets\images\others\img-38.jpg" />
+    <Content Include="html webpages\assets\images\others\img-39.jpg" />
+    <Content Include="html webpages\assets\images\others\img-4.jpg" />
+    <Content Include="html webpages\assets\images\others\img-40.jpg" />
+    <Content Include="html webpages\assets\images\others\img-41.jpg" />
+    <Content Include="html webpages\assets\images\others\img-42.jpg" />
+    <Content Include="html webpages\assets\images\others\img-5.jpg" />
+    <Content Include="html webpages\assets\images\others\img-6.jpg" />
+    <Content Include="html webpages\assets\images\others\img-7.png" />
+    <Content Include="html webpages\assets\images\others\img-8.jpg" />
+    <Content Include="html webpages\assets\images\others\img-9.jpg" />
+    <Content Include="html webpages\assets\images\others\material-icons-bg.jpg" />
+    <Content Include="html webpages\assets\images\others\modal-basic.jpg" />
+    <Content Include="html webpages\assets\images\others\modal-fs.jpg" />
+    <Content Include="html webpages\assets\images\others\modal-left.jpg" />
+    <Content Include="html webpages\assets\images\others\modal-optional.jpg" />
+    <Content Include="html webpages\assets\images\others\modal-right.jpg" />
+    <Content Include="html webpages\assets\images\others\profile.jpg" />
+    <Content Include="html webpages\assets\images\others\themify-bg.jpg" />
+    <Content Include="html webpages\assets\images\others\visa-white.png" />
+    <Content Include="html webpages\assets\js\app.min.js" />
+    <Content Include="html webpages\assets\js\apps\calendar.js" />
+    <Content Include="html webpages\assets\js\apps\chat.js" />
+    <Content Include="html webpages\assets\js\apps\email.js" />
+    <Content Include="html webpages\assets\js\apps\task.js" />
+    <Content Include="html webpages\assets\js\charts\chartist.js" />
+    <Content Include="html webpages\assets\js\charts\chartjs.js" />
+    <Content Include="html webpages\assets\js\charts\sparkline.js" />
+    <Content Include="html webpages\assets\js\components\notifications.js" />
+    <Content Include="html webpages\assets\js\components\slider-progress.js" />
+    <Content Include="html webpages\assets\js\dashboard\analytical.js" />
+    <Content Include="html webpages\assets\js\dashboard\bank.js" />
+    <Content Include="html webpages\assets\js\dashboard\default.js" />
+    <Content Include="html webpages\assets\js\dashboard\saas.js" />
+    <Content Include="html webpages\assets\js\extras\gallery.js" />
+    <Content Include="html webpages\assets\js\forms\form-elements.js" />
+    <Content Include="html webpages\assets\js\forms\form-validation.js" />
+    <Content Include="html webpages\assets\js\maps\google-map.js" />
+    <Content Include="html webpages\assets\js\maps\vector-map-lib\jquery-jvectormap-ca-lcc.js" />
+    <Content Include="html webpages\assets\js\maps\vector-map-lib\jquery-jvectormap-us-aea.js" />
+    <Content Include="html webpages\assets\js\maps\vector-map-lib\jquery-jvectormap-world-mill.js" />
+    <Content Include="html webpages\assets\js\maps\vector-map.js" />
+    <Content Include="html webpages\assets\js\tables\data-table.js" />
+    <Content Include="html webpages\assets\js\vendor.js" />
+    <Content Include="html webpages\assets\js\widgets\widgets-chart.js" />
+    <Content Include="html webpages\assets\js\widgets\widgets-data.js" />
+    <Content Include="html webpages\assets\vendor\bootstrap-datepicker\dist\css\bootstrap-datepicker3.css" />
+    <Content Include="html webpages\assets\vendor\bootstrap-datepicker\dist\js\bootstrap-datepicker.js" />
+    <Content Include="html webpages\assets\vendor\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="html webpages\assets\vendor\chart.js\dist\Chart.min.js" />
+    <Content Include="html webpages\assets\vendor\chartist-js\dist\chartist.min.css" />
+    <Content Include="html webpages\assets\vendor\chartist-js\dist\chartist.min.js" />
+    <Content Include="html webpages\assets\vendor\datatables\media\css\dataTables.bootstrap4.min.css" />
+    <Content Include="html webpages\assets\vendor\datatables\media\js\dataTables.bootstrap4.min.js" />
+    <Content Include="html webpages\assets\vendor\datatables\media\js\jquery.dataTables.js" />
+    <Content Include="html webpages\assets\vendor\dragula-master\dist\dragula.js" />
+    <Content Include="html webpages\assets\vendor\dragula-master\dist\dragula.min.css" />
+    <Content Include="html webpages\assets\vendor\fullcalendar\fullcalendar.js" />
+    <Content Include="html webpages\assets\vendor\fullcalendar\fullcalendar.min.css" />
+    <Content Include="html webpages\assets\vendor\imagesloaded\imagesloaded.js" />
+    <Content Include="html webpages\assets\vendor\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="html webpages\assets\vendor\jquery.sparkline\jquery.sparkline.min.js" />
+    <Content Include="html webpages\assets\vendor\jvectormap-master\jquery-jvectormap-2.0.3.css" />
+    <Content Include="html webpages\assets\vendor\jvectormap-master\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="html webpages\assets\vendor\masonry\dist\masonry.pkgd.min.js" />
+    <Content Include="html webpages\assets\vendor\moment\min\moment.min.js" />
+    <Content Include="html webpages\assets\vendor\noty\js\noty\packaged\jquery.noty.packaged.min.js" />
+    <Content Include="html webpages\assets\vendor\nouislider\distribute\nouislider.css" />
+    <Content Include="html webpages\assets\vendor\nouislider\distribute\nouislider.js" />
+    <Content Include="html webpages\assets\vendor\PACE\themes\blue\pace-theme-minimal.css" />
+    <Content Include="html webpages\assets\vendor\perfect-scrollbar\css\perfect-scrollbar.min.css" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\default-skin\default-skin.css" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\default-skin\default-skin.png" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\default-skin\default-skin.svg" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\default-skin\preloader.gif" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\photoswipe-ui-default.min.js" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\photoswipe.css" />
+    <Content Include="html webpages\assets\vendor\photoswipe\dist\photoswipe.js" />
+    <Content Include="html webpages\assets\vendor\selectize\dist\css\selectize.default.css" />
+    <Content Include="html webpages\assets\vendor\selectize\dist\js\standalone\selectize.min.js" />
+    <Content Include="html webpages\assets\vendor\summernote\dist\summernote-bs4.css" />
+    <Content Include="html webpages\assets\vendor\summernote\dist\summernote-bs4.min.js" />
+    <Content Include="html webpages\assets\vendor\sweetalert\lib\sweet-alert.css" />
+    <Content Include="html webpages\assets\vendor\sweetalert\lib\sweet-alert.js" />
+    <Content Include="html webpages\EmptypageDemo.html" />
+    <Content Include="html webpages\Index.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
